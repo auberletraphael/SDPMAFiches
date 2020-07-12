@@ -15,7 +15,7 @@ window :
   -
     name : BTN_Importer
     identifier : 0x2f07eb9d0192ebc7
-    internal_properties : BQAAAAUAAADzJgPVLcetMUWWJ1EdD39NFWXuXfoJ4RUZxyLoZMvYe/uIcQEkmpqvBd0nCUZF6U3ukR5KojZuNtVBVBLFvKPWaKt89f1bSQawrUT40ipE9VJuGzdfbUM0ycsb1JjyaX0Y9Ahnv5z9to2EvPwtw58RKebHPt2oDsZ3HEGlogPKk10p3LOwgmGQNY9qQExw4ApY+vZ5XXU5QxJVDGMqBg+3DydHQnWew+l+kpzSdNzun9r1OmPxd0VkJc+aM629h1K783inKFd2bDKMBmaIlPper7HU1yxonBITCLf9G+FvWi/n7MwYN6c+vy4+Yp2wiH6RAA4Skp7vvX3R5oaLzmpOeQbi3/zXmb1i7PR2yiSsTc29hRKzBTP4+pnqQ43loitaRITfXvcIyjrj1CzfxrRBA08FKMGvcPCARKxuFNqK5xJ9kv5DcYC34ltOkgPXyiwLzhOx8Q15XthgYeoIMy8phwcnaTRNFdsP8qIdoxQIzC7zCwlmDgM+ENPUUAoR0FTLutL81ax6wawtP4mZCfzD/5EblFpUMLaKqBmhHz2OdGVO2o0kl4Gn8ACA9SaEAdXu2UMpyrEip0+PdOTu3pPMBiNzFGrkG9RLIzFHHiLv5j1797g6PZn45Zx4H1wFTO9RfBgdP6kKn7cc9ShNXEaXZqm5etGnnBLm9Grv1TiqTjT/DMVLY3LJ6vyYU0cwcmu7F7DJNvu6dKF+qwy/xg0dvjn8PniQjd0zbgCk4Sdnrl+TwMHBPUCACzwu+MERmmXnUO/H6oYt4xs2ZClnizqx6Uaq1n6xJIbEVCVPgt4Wo3+IqrW27t+4oV61B73pdaaeIcn/0b4y7u37Ih+gMXSYGt606TvzXKtrpnYQGsxDLqwpM104WaKquwsMF95J5Hc=
+    internal_properties : BQAAAAUAAAC34oqepCfVn2IMMTM5sDFeIhAivET5hnhiI9OwfyhTHqEdJJnMa0HovkGj+4V06a8xzjubVhxTQgIzfKrxl+2m+ZBEUfuvqkkT6Ox8Eqa04V6noO0rRjbkOCpuzoHrwOz1OECYIQZ6y/zzDEmw7Uu5ws/xl0Ctd5Rmm+GiDthHjvXmzI1a3QvHbaB/db4kfFFM0f1SWskfPcf1WDZz1iAxaAkWZxCY0TYHL/xCxhWWYu1Gx7dfLkUiXRHOaBBk87J5eVSPQmmBE+m36nghL1XIZoMxhBOLOoKQCKfIQhhxAt8lP160QXBNGzDDR16W7hsxxxP5zKTHUzsXDKXNkRB/3/c7y7DhzHyBUBcVgaffgClxagj7woJp6fSCiH5x8Dw4P+amFJU+StovklJgTqa3ziVK4Vixs+an3lhTjXbR6iGHx+mKQOdm4NRHh5n8e4oNAZlCPhLtEPTFkU8QRB7l/4BvOJfYjZ0vfVRsl2dxBsJEG9jJfa9WGOBqDwY8KdSB/fh1+hmgqWZCgbiF5pN3SyJbfUdJWPzII/P+f5QH/lHFkuDDgruX9LPgMK4F5I/OJudkKeha+13KaDnmdSQExBip9Rd9j4QPNt9sBrF0VoWk+x1Lyj/etTmgUKDKP5v3h2IkSky0HzFVJYnbrYVRuPKx0y6w1nAIJ6q+sft7mOhQmCo0nAoZ4gvumlkPOwMvSiL4CUYQ8nkzjf39v9gXwIKKMWc/i5XbHVzxwR5cYrmYjhbaCjK0RKZRD5jHrUlq0SOmTUnWoCwY2V5kE7Q/WX1G04/yH0+1WuYlbvz2epPdoDJdwZPeweLFGtWpkCbvBRYC2YLJv9N59TsfGW+gCbrvWyMui2w99IfHAvPmBCpyUqtqe6eZyPqmLEN+xkKT
     type : 4
     code_elements :
      type_code : 4
@@ -90,7 +90,6 @@ window :
          numligne est un entier
          nRetoursaisie est un entier = Saisie("Quelle ligne voulez vous imprimer ?",numligne)
          
-         info(numligne)
          
          
          vAriantAnimal	est un variant
