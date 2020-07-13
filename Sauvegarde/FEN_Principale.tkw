@@ -38,7 +38,7 @@ window :
   -
     name : TBLR_Tableur
     identifier : 0x2f07ebbd02166627
-    internal_properties : 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
+    internal_properties : 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
     columns : []
     type : 114
     code_elements :
@@ -47,7 +47,7 @@ window :
   -
     name : BTN_SansNom1
     identifier : 0x2f07f38503d9ceb3
-    internal_properties : BQAAAAUAAAAGf5HgAR5AmGAd/uAWx4RAVsFAiE0AsHD63OJp2+ckHAxqI2C2H5nyRekOWBrGaKAqmJ3LeVBgdQ1CMi5XBK+isLt94vN1uaWTtFVLKzoOXku5O1bfW4Yf3v7Nm9SvxKrBSuB+Sc94qR+VOQzM3aK4h7i0asJYeK+mDwZ0XWqLafmXKakPwiziKgHJ+THhweYLBr8gyPymnFOMqJYy4ZAn3cECEGH0oHX8X+MLiDvMFJPyzfGB68Iw4RW76g1IuZPRomsckCPvDX53zgLlXOl+3DDhyldLg8ix6+WWO8b+wtXLCQx1CUy45yCvz8ibDQ+vOzUw8XumBwKfMCJqon0xdJkQWGyDUFq6QW+jZOnW/vo42pyRvzjiOqsN8xVrQGrkXFDt28JAnPAPJCKN13Y3qsqzFZWGvvdt6F9WkCS8vlKP3zUmvDjxOg1BT+CZH0WsQ4bmZopBx6Lp0ArR/MJ3QlFQt7yd/PR4shuHtXie90jHRwCUF0AuuGF53VV4jTKrHttN0gwEgnZS/XuGdYD7HsCdlHFbvIfkZRRhpW9hQMMOAVXGiRVgNqdWCBS6PE4KWPqs1cmLJ/vf1SZrzD/ZtbcBRgCzFqCBy3W3IoT7Apm5WARfdpksdeaX2YYNXQ/MlA7N1GFls7HuI8wqkKzEaYxpx6gnS5k7RhMOsm8FbJ/PUmb6+nup9ihQZhA1nOlNHWNEUEXepP0uzZ2y0yzP4EcaoPni
+    internal_properties : BQAAAAUAAADcw6n7uYz/pMEIC/EFM2aVcXxl/0QWVz/ekiJhL+jfMiswViAlontm5LrB1/lzaqfseoOV6LjGje4/MRwqYWUNQBIteh3+rOs1rFLSZdxY9ugFMQMbp7D4W9WpigRNm10qiub3QnYBVM5o85RTEaOzGlgFzToZuVfmb/9P6PCDIIeaS1qoOy0V8tc8C0z4pyPerTKoFqb6MnUc5ZpiOKIfxTf86V40OC1OM72M9ZRzFLWdUizdZRI8u4wM90oT4YjHbFNYYxWP2SqEq1cdkiRQUbJ6qCTubnhs3lLFlHIHhlHAOJ2zkHrSvHYozfZ5DujJ8m6xHxKGZqF30vH1B96j2ZBwBGkH80HcDGL1Frlkfw8AeMfkX/78RuJrSw6m6ArJ4mtgdGVjFAzUCUveGwzahy9kJ8EF4wjVa72hE04xcmggJzcExczZ/4DIi4noDz1vr2t4WLpPgYoSsa6u2DlAhnyv1wn9E2GD0wzvUd+HCogtv87r5/Z/mM28Dl55cVNML53YW5sagCNmmrqVrwEW0YQrFo8Ck/roHD7w3rGz5BV4jgBhWH7lEZKuLuacTdRCLuTgsAaAN8Njt9jCbszcgSJVaSX7qHOvq+L3Zef+W1dQFLwOjBkdVR07MsBCkoMtX2DGu/1P+Jy7L+g6aUjtQ/sfW7xrjLbA88HrqlZ1qP7Ph3VOv1Zr410CMdbaB03+n0YAyyv2ocB+fHOjhK5J7KcmWaszI+x9zAAwUtjTUA==
     type : 4
     code_elements :
      type_code : 4
@@ -72,7 +72,7 @@ window :
   -
     name : BTN_Imprimer
     identifier : 0x2f08079603e8308e
-    internal_properties : BQAAAAUAAAA5DmJMf5H8v6CyM6Tnd27QiO2C+dSa9cO68wev8/TSjbbMH4Q5abTM1dHvtHYngcNkqkzeuM6ENI6KxnZ0wQCrelaxCCz2YI0N7y09CwSpdFecxUBV+V8hA1vXTGGa7ZtnqlNbc5fobOrpbGe2e6C4NYDg1iy9+AcDuqWwkxFJ65dC2kTWOUs49xktK2e6bREJiilNw8cQpNwipAfwIGBUhFYYjbEEcxnHFaLlD4TRmkZkB48pXl/6P5Ekcrr8wyYiB/JwmXpwJa+eq++PXBsBmuzuV2hFEx+zZ0K+Xf9mcbp44iYAyCDxyNkhEjP928xIJvhgckiAqcPm12iAv6eawJpIG2AF+XgzI5KTue+wox0OMN7bCq+pPhN8PvZ95rt4Zb5l7HLE4DnycJJehOmHk2oZc4I6M97/gmlxcFG6Hvlj7yXyhDK98psccUtJ8si8/+SCwsRcQrzEVtUN4yMvsapSdon3o0vn8qhm/qmxH+g7OfPYT+YlowsrK63ODkmE07kjNgxD6snmKWUce4JK3MCixMhGT2l+TMKBBQ/AxBJKA+n4DetsB794ijo/pNEMbMIqhEDfNNB4+wZyapjFXDHNcqhXzqWITN19uWNnWyoioIRzhIvQF93eew4BWMFfhwILuNxXZAh9P60QMvn6iU3od3+tIFnnABLu+E7QZ9HSvCX4QzsPEEM1L4TEA+uAr11Hr4JVDdC7w1+p9Je+UpVPsvB2P52LEgcdlUZAC0S9YNUyBOkQMwzw7YC4tew2ZO5TMluRkCoYx6sR6egoPR70GJh//NXpiV9w1oFWZ8MToHJrUuze2ko3lGDvzuWbASLO+TlsHvDn8IbhBL7lADDiMjA3fne6EfCZoassMw==
+    internal_properties : BQAAAAUAAADt8ScRr0XUdz7Er5eQqr6RkMUhtBfW73zBuxuUfNg/nw7BK+vnnnnFZOy7vtTWG+mfp3uqjsxWCbT09qjh5c6MFHKIpoNTdfZ2MIOXQIhm4m3ZWVTHgqo60fRhjz0hUPPG5drzZXvHB8+rQoSjmudXWiMca6vFkvUQj3oIYr0r2Eu7Cs1ias08Pg8E8jwofWLiOfPKzanqI4XUyXHUz7b79wUnn5wcomt/+XxVJZU30HrxIqvAvlrTSwbEFw3lesRunmLg4rhcw2VFVRsFItVOSFNX90w6m0NqpCy16rjDhyQ9iUnWb1SvzOJdTHsF5Nqid/OpLzPT5gUpVsYM6NsArSkVvuY40iJLTAKTEd2LQHbdB5kFolvYYgwC7g+XS8m1EUl32S5FNQU3RYwvTOCV2CBE8a2sByQNU+JdtlfdAQQ1Wl1wAvV2LXNgLr4hTJ/TRwu+nq9mnBwzQlJPYOzpxsec0YzHQ6x2MHMtXJeHtcNpbDF+5FTgrHOSX1v2nhe4QIeuqpPsZG1wzl6PfINPgyyNb4PCWkPUJ1JTsLf6Yq7JJQxjNFv/SI0J4bC/zNMwGd6t10rOArxPwd3i1uz7CJoxmQdWAph76ogV8pbuu+YDKqMS+q6J0FC3CVw551wZPVj9TozgQO8DSkfDB1YdvlMcmijN8Pq+1VPT0hT6OdtUWrqtSfNtGNulSwqfdZ5w1IhG65wQanJIxLnnGuZPoBhfogOC+gx1ZhOOS7I7V3zNbzkpomsd/6Hgn1xYC36BIV+4g4BDN12plhrad3r48S0a2S36NEnRiXqInwkxLM4kyyf1X4Tfekxf/xF1ZeTAq/tEo1st9ho6WqaOvsGOBM8Er8yjuZmuyJcrC2I+pXvA9cqANgmvRQ==
     type : 4
     code_elements :
      type_code : 4
@@ -90,21 +90,34 @@ window :
          numligne est un entier
          nRetoursaisie est un entier = Saisie("Quelle ligne voulez vous imprimer ?",numligne)
          
-         info(numligne)
+         si nRetoursaisie ALORS
+         	SELON numligne
+         	CAS 0
+         		
+         	cas 1
+         		
+         		
+         	AUTRE CAS
+         			
+         		hydrateVariant(numligne)
+         		iAperçu(i100, "Fiche", Vrai)
+         		//iDestination(iMiniAperçu)
+         		iDestination(iVisualisateur)
+         		iImprimeEtat(ETAT_protoV2,vAriantAnimal)
+         		
+         	FIN
+         FIN
          
          
-         vAriantAnimal	est un variant
-         vAriantAnimal.nomV		= TBLR_Tableur["A" + numligne]
-         vAriantAnimal.nomS		= TBLR_Tableur["B" + numligne]
-         vAriantAnimal.famille	= TBLR_Tableur["C" + numligne]
-         vAriantAnimal.img		= TBLR_Tableur["O" + numligne]
+         
+         
+         si nRetoursaisie ALORS
+         	
+         FIN
          
          
          
-         iAperçu(i100, "test", Vrai)
-         //iDestination(iMiniAperçu)
-         iDestination(iVisualisateur)
-         iImprimeEtat(ETAT_impression,vAriantAnimal)
+         
         type : 18
       -
         type : 161
@@ -126,9 +139,49 @@ window :
      code : |1-
       PROCEDURE MaFenêtre()
       FEN_Principale..Libellé = MoiMême..Libellé + " Version : " + ExeInfo(exeVersion)
+      
+      vAriantAnimal	est un variant
    -
      type : 230
      enabled : false
+  procedures :
+   -
+     name : hydrateVariant
+     procedure_id : 2237213610828427546
+     type_code : 14
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //hydrateVariant (<numligne1>)
+      //
+      // Paramètres :
+      // 	numligne1 : <indiquez ici le rôle de numligne1>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure hydrateVariant(numligne)
+      
+      vAriantAnimal.nomV		= TBLR_Tableur["A" + numligne]
+      vAriantAnimal.nomS		= TBLR_Tableur["B" + numligne]
+      vAriantAnimal.famille	= TBLR_Tableur["C" + numligne]
+      vAriantAnimal.dureeVie	= TBLR_Tableur["D" + numligne]
+      vAriantAnimal.peracti	= TBLR_Tableur["E" + numligne]
+      vAriantAnimal.tailleMin	= TBLR_Tableur["F" + numligne]
+      vAriantAnimal.litiere	= TBLR_Tableur["G" + numligne]
+      vAriantAnimal.poid		= TBLR_Tableur["H" + numligne]
+      vAriantAnimal.matsex	= TBLR_Tableur["I" + numligne]
+      vAriantAnimal.gestation	= TBLR_Tableur["J" + numligne]
+      vAriantAnimal.portee	= TBLR_Tableur["K" + numligne]
+      vAriantAnimal.maintien	= TBLR_Tableur["L" + numligne]
+      vAriantAnimal.nourriture	= TBLR_Tableur["M" + numligne]
+      vAriantAnimal.cout		= TBLR_Tableur["N" + numligne]
+      vAriantAnimal.img		= TBLR_Tableur["O" + numligne]
+     type : 458752
+  procedure_templates : []
+  property_templates : []
  code_parameters :
   internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
   original_name : Modele1
