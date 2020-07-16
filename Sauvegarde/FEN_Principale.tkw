@@ -190,7 +190,10 @@ window :
          		fiche.MAT_SEX = 		 TBLR_Tableur["I" + i]
          		fiche.GESTATION = 		 TBLR_Tableur["J" + i]
          		fiche.PORTEE = 			 TBLR_Tableur["K" + i]
-         		
+         		fiche.MAINTIEN = 		 TBLR_Tableur["L" + i]
+         		fiche.NOURRITURE = 		 TBLR_Tableur["M" + i]
+         		fiche.COUT_ANNUEL = 	 TBLR_Tableur["N" + i]
+         		fiche.IMAGE = 			 TBLR_Tableur["O" + i]
          		HAjoute(fiche)
          	FIN
          	i++
