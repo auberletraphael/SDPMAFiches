@@ -67,7 +67,7 @@ procedure_set :
       //
       procédure PixaBayCherche(sNom est une chaine) 
       sAPIkey est une chaine = "17517352-d1c6b89d71b8c979ce646f216"
-      sUrlBase est une chaine = "https://pixabay.com/api/?key=%1&q=%2&lang=fr"
+      sUrlBase est une chaine = "https://pixabay.com/api/?key=%1&q=%2&lang=fr&orientation=horizontal"
       sUrlConstruit est une chaine = URLEncode(ChaîneConstruit(sUrlBase,sAPIkey,sNom))
       
       
@@ -95,7 +95,7 @@ procedure_set :
       	POUR i = 1 a nNboccurencereponse
       		vAriantRetourimage est un variant
       		vAriantRetourimage.ImagePrev = vAriantRetour.hits[i].previewURL
-      		vAriantRetourimage.ImageWeb = vAriantRetour.hits[i].webformatURL
+      		vAriantRetourimage.ImageWeb = vAriantRetour.hits[i].largeImageURL
       		TableauAjoute(tabLeauretour,vAriantRetourimage)
       	FIN
       	

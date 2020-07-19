@@ -103,12 +103,24 @@ window :
          
          
          tableauChaine = TableurRécupèreSélection(TBLR_Tableur)
-         sChaineUnique est une chaîne
+         sChaineUnique est une chaîne = tableauChaine[1]
          
+         sChaineUnique = SansCaractère(sChaineUnique,"ABCDEFGHIJKLMNOPQRSTUVWXYZ",sscTout)
          
-         pour TOUT sChaineUnique de tableauChaine
-         	info(sChaineUnique)
+         numLigne est un entier = val(sChaineUnique)
+         
+         si numLigne <> 0 et numLigne <> 1 ALORS
+         	chainerecherche est une chaine = TBLR_Tableur["A"+numLigne]
+         	Ouvre(FEN_Recherche_d_Image,chainerecherche)
+         sinon
+         	Ouvre(FEN_Recherche_d_Image,"")
          FIN
+         
+         
+         //
+         //pour TOUT sChaineUnique de tableauChaine
+         //	info(sChaineUnique)
+         //FIN
         type : 18
       -
         type : 161

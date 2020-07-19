@@ -10,7 +10,7 @@ info :
 window :
  name : FEN_Recherche_d_Image
  identifier : 0x2f14379701cb82ba
- internal_properties : BQAAAAUAAABb7LH2HXDC12eyJ3M0a1pn37Jnjag6lXwD4+JKyMhs7LEA3ThiN+JaYqiuJ4ej2FRwlpdRrXimJcEfCwu+Bp67HN4GS1cc0nia03uOmf8hfmqlyn4C2WOhXW5tXMfdm7NhMde/r1xboSdVYLiTf4Unj0As8+91RZS8hRh5Q/SlRYoe9pRTHZlod/EqIk51iYiuumPsYe3buz68hi3U+TxhTeZoN5lGzpuUtuLvQvrz8Hky3TzI/vgj+yKYJvYq+3V31YthhB0XZCec19Eh9fT6cfhgUE6kdMkLB6JiaDqr+hipOQz0pqAjcyQBMCe6EaT6nPWVP9eqn8u+3H9EL5YxGpISxMIOE4V+070x0ervohWr2WbYxp/UdFHxxPh/6pNXZIF4i+E/r2HIS2cdeJ58V9qw8B88e85tcslvEpYVVwP748sbzSn8Akmlr++HdSbf513OYJPGBPJSic9dfKZzpfPnOCvjtko/Xl10nHtgDmnYrd+wnVyha2KmZwuKiRTsPcIll9aA0epXSNwGCsd/1Hz+K6mILysJciGOE6EV+yE2fqImIKqTXsbVUcO5lY3KG1tRt8Mfh/FqyNtGNXHxYMctloOOqxHORE4+FAE5bin0iDYAni0AxN+2oIZv1opXHx7uysmqAH1Ef2P4kr9r1PtXvJfbunNNZTwf5Vf1PnUMtatEHw==
+ internal_properties : BQAAAAUAAABsm+o4GnH5zhrettIJ4h8xazw6uyLhBZakaFm5H6o0ik5KEUbNlhJNQDynV7bTZ+47cI2n7GO2nlkJTDnzt0VgS5klRrMKNSjDbJhX8/huxB6ZY+AzmmmVrEX3cEb7nx2lm3+17+ApKU97fyNDmc88WdiIMCKPWewD+FjVNkpm09j1b1k+ID+aBkWRHGPB4PjlmJ+owYtwtdO9jTuU9NEl2lEilUfkmKQMj39e+y5Fy6ckf304sztYRjo8Bq0752HfO3ZlT7zpB4j+H7mQzH2oYE8KPYqJT9i5Eh5BpNPQt4F3HuuxO7ph0qzMxi5URQf5MOlasVUIaQGC6tA+LB3cRPEDkBM4N8WZMH8gioy5LDfxNKLrOuP8Izo3mR/1bBVJ2jgw3qvPEyaDAeaGunRKIVCHvFSS7Wxst8kWv2p1E/1RkltcI4v6A8SlUna/6fa7n6CGs4HQooNNEVKEvpJLvQ+8NA7DsCA2wz9r0cWmxKtmnN8bOR4PlP32wBbWcQBe68fLGhTMyZMycDf/sMtPsKRJCdqqZbWmUQ2bDB85o1UetSyDIFIMgjUJ5qewFmENUejFcmnxp1GqfwnKhF376luYk4iNxA6TwYK/n2e76qzftm74riOC9HI59H8sivL3bksOwEa2DTL8syKGUedNcSag7dHnN5GsnXSNhfiCq05wXxQ=
  controls :
   -
     name : SAI_recherche
@@ -74,7 +74,8 @@ window :
          -
            code : |1-
             
-            LanceAppliAssociée(ZR_images.ATT_lienWeb)
+            
+            Ouvre(FEN_Prévisualiser,ZR_images.ATT_lienWeb)
            type : 18
     columns :
      -
@@ -166,6 +167,13 @@ window :
      code : |1+
       PROCEDURE MaFenêtre(gsRecherche est une chaîne)
       SAI_recherche = gsRecherche
+   -
+     code : |1+
+      
+      si SAI_recherche <> "" ALORS
+      	AfficheImages()
+      FIN
+     type : 34
    -
      type : 230
      enabled : false
