@@ -48,6 +48,78 @@ procedure_set :
       renvoyer faux
       
      type : 458752
+   -
+     name : PixaBayCherche
+     procedure_id : 2239429972866096193
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] PixaBayCherche (<sNom> est chaîne)
+      //
+      // Paramètres :
+      //	sNom (chaîne ANSI) : <indiquez ici le rôle de sNom>
+      // Valeur de retour :
+      // 	tableau : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure PixaBayCherche(sNom est une chaine)
+      sAPIkey est une chaine = "17517352-d1c6b89d71b8c979ce646f216"
+      sUrlBase est une chaine = "https://pixabay.com/api/?key=%1&q=%2&lang=fr"
+      sUrlConstruit est une chaine = URLEncode(ChaîneConstruit(sUrlBase,sAPIkey,sNom))
+      
+      
+      
+      requetePixabay est une restRequête
+      reponsePixabay est une restRéponse
+      
+      requetePixabay.URL = sUrlConstruit
+      requetePixabay.Méthode = httpGet
+      
+      reponsePixabay = RESTEnvoie(requetePixabay)
+      vAriantRetour est un variant
+      
+      vAriantRetour = JSONVersVariant(reponsePixabay.Contenu)
+      
+      nNboccurencereponse est un entier = vAriantRetour.hits..Occurrence
+      
+      sReponcetexte est une chaîne
+      
+      
+      tabLeauretour est un tableau de variants
+      
+      
+      
+      	POUR i = 1 a nNboccurencereponse
+      		vAriantRetourimage est un variant
+      		vAriantRetourimage.ImagePrev
+      		vAriantRetourimage.ImageWeb 
+      		ZoneRépétéeAjoute(tabLeauretour,vAriantRetourimage.ImagePrev,vAriantRetourimage.ImageWeb)
+      	FIN
+      	
+      	renvoyer tabLeauretour
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     type : 458752
   procedure_templates : []
   property_templates : []
  code_parameters :
