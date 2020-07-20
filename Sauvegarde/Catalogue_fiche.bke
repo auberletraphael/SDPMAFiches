@@ -16,7 +16,7 @@ report :
   -
     name : CORPS
     identifier : 0x5f10401603b37a9b
-    internal_properties : BQAAAAUAAABAfay+RmC95L0fOsytpRcweO8ZKFCUGTGwsfmno9Rd0tayv6xW7O0Udy4U3fJjeuwFM5uhDWWw78vfkLJL2wy9EWuy2yGb5iXy49MVwbwn+aUgVDepVAcxrTYiJpxxTpZwq4VYA5ORKKAAx3WSncHBZ8XBL8igMxr2KA7JS5WwWCERzH0puIo4JvmZQ/wUrnzM0LN3LwdXPTzCsoTqPzfWLiWNf9UsQbw94a6kOlg2M5NWKsQZ+/osF6f4xi9AnZB/9PBZgiN+CGKjeCdT
+    internal_properties : BQAAAAUAAACTeyLWYf98nBN3xDbaED+yHmlvNjblY6mBZZ/bBE+6pDAFMDLQLulB18MazopdMK8O0Li/k9o3Gw+mM4/GBW23SXDe+ut/4M8a4zXECDhhCPJxTJooXzPAg744piFWLUveWl9iXW2k7xdQ+I5T+8EzZiSduqTDl2yFhqncOL+cYLLSam7xKRLmA/0YGgXYjH45la1+Z9ivvXXg+m/G9Lo+u/LvzcUwQWnp0kQRrMcdsu3PJRDXdBgUgrFXZuPBmJYSeCSiAQx/fiv3V+g+aFzf
     controls :
      -
        name : FRM_FORME4
@@ -209,7 +209,8 @@ report :
         p_codes :
          -
            code : |1+
-            MoiMême = fRepEnCours() + "\fichiers\Images\" + LIB_IMAGE1
+            MoiMême = gsCheminImages + LIB_IMAGE1
+            
            type : 327692
      -
        name : IMG_entete
@@ -255,7 +256,7 @@ report :
   p_codes :
    -
      code : |1+
-      PROCEDURE Catalogue_fiche()
+      PROCEDURE Catalogue_fiche(gsCheminImages est une chaine)
      type : 327680
  code_parameters :
   internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=

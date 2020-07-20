@@ -10,8 +10,38 @@ info :
 window :
  name : FEN_Prévisualiser
  identifier : 0x2f144b7705882339
- internal_properties : BQAAAAUAAABDgFTb4QFj/Qd3PfdxT24w5MCN521M18Rt0QHG29psgIwqcT/SxCU3ht5mA8pRNMi3poj2dAQTYpNhgCjkBqVr5abUq+zDoqFmcUvVbKzBmA4BibKZOZCaDmxY18t5OVatsfuOgUqsW1QJwaOD/gP7wmwoQmGIpJdsZuLnxam/i0AV2ky7HD94TuFftokJ1eol7DZIKSLUaCBO6gA0cfr2nDf8fjnQAe5YykzpKbUHrjsAbGnydLDgvbM1/0MjUO1rIvWZrvGuCWOXbXYS9yT4cZDttxmJmaRhxp2dhjjIql3DkRQqIRrzdI6LXQ0xONABkaXkgU0SFlOK0UaLcAOSgP/azj6DxOOOo2yQYnRukvNJpeo2SRAgttNyNedVjw8LULsWT9SoOcsiBgJmKnLQ0y7YQAlT6u65zkYIG4Z0n5PbCZUT/rjUOvFOXNTJZoAV3Rt4MC5fStxMJsTE7sX/Wc+devPwv/jH1rgTYcW1lidO18W0hqHDT47lau5+9Ar6g1AfP3FbYXJnOf13wWQLlJyy9/Qy/DnYhzvk+qUmUcCfZ5mAR0btkcDvwXTeYW6MZjIyHukXIvKS9DBtMQWss/AahtI5LCFVhd7ejiBD0eCruyeiEgPI/47Swj06cagtX9kF9VpR9HPsTo+Fpq8qwZPHLy5QN36oD6w87q80xw==
- controls : []
+ internal_properties : BQAAAAUAAAATjHiKulwR8n4IyavWeapUuMSUuWeMdqKsgeF9kqd0V61XhbXF1QCWhIr9MpKdFXmUynbasS6DY/4ZB/5v5l+WesY7VHpmKjV3urojFvQJDNNms0vfQhpFPZi3u2U+iSOHxieweyJkRkioIcnf7/tUNZjivNdvkZm9nivSExwYoZQxD02cTfBgSpDdUePF1QNr1rVTXR5mhD4zGzlnbVx7t/aRSM3DR7CPtLsfqarMsa5cu4k1hyuKvIznJG7nWX+ImLPjl8xm+42w9a0mleED5d0u1eAt2eP4X2QUQwYtLhnh7GV6QzcrvSnE+y7CCZje74PaZKy+Bdnfo/Xy1Rs2ont4lUX96jW/TagCuHdpUopfyr0hFkF4XkV+UKXaOe28JvCSJUFQZUp6005Wg527t9neFvEKbSHFX5Y9kfrlFvMEQ+elnUOeQ9PfEGki1r72f96rFQLrO1YZoOVkbtzaNvHE/0y6oTx+I6I2hYcqAfvZ9SPwZq8CptL/W0BD4zzrsdcsphXtkX6bnF1ZJr1OLAqb9yzE9HrJ757sTizvputrkT3qPuLieRUkT5aLZ3L3+C/5B6sE5tey73qW94SzGU20breaWdDaHER74tPXC9GzRds3vnlAd9Ny8H9yzGIP5u0BqNlVPW9dCeZ1KLWSaN+3ei/2GWoJUveiVB46YQBDwIEgkdsPVONVxJExLNVTESz8uWzKHRtLc0pkDPmsxefvhVRXlSc7vwBJjs3L9F6whQetMEEGeLbt97fXCnuLGkZNqf2+wZpcCF5CmnuYT1QrT+Oaf9hkD/pcUhZc
+ controls :
+  -
+    name : IMG_SansNom1
+    identifier : 0x2f144b91058b88b9
+    internal_properties : BQAAAAUAAADJa1xw4Oiz6DaMK4+SH9uwDf8tYbLNvZ8DVn8iaIPkMx2empiaRQTNw7vpcZd2ZPq3+QAwLysNxyvosBeDOZXn8K43UhMO9ur+jqeWX9ZST4BOv3NX2doAYbFFMel4tzjZl089RbpLYMNLagqkVu8jAXh49Pbt89J6mFRg50wfjkrIXdgaILOSU/DwfSvZsfvwtNXo0hFx2QYAUVGf/NxjBYM+SNcCF76zan94PmgMAG5LjBkWo3E38UR5FRAZyQ0GUP8CLntpGQPYjEEQblIqbL1sahFyoiJyJTpT13cJ8+QNADtjGiOMPQfnaf6IbKQUgVbP1KI0f47U5YuoHRgK5NHIYJfTEUXTmXd4y/EqRSe0euUMnvE9dvMwprUZZYI7+BML3O783FlkNeVUbNqdLb/8pVuBmoGxXySmXbtKj8GVTSX/zXD5dm6Dq4l1J2TcK5SLK8xkWgoaSvj7AxHWCqKU9/tlQytvMZVdlV6OzQfDFLl5ADiTfzH570NKRTHNTRX4PCBj0Ef9n60QB+1Nj5bOJYcsbOgEsTkLYaRtFeQ+6RW5FFdgxgWjlVi4HY9SKR09TxHDBxUbzzgpi6jzdTqU/7wwBMggLJZyLg6bWYaERIkZlc+wO+N4BM8Qt8IK+XaIikMPeMPobq4NkErawud/fI4nDTOUCRW5qlDj5XI+gOEAmIZsWsZGJuJWdHTx5YdbLPoW3sSt5y8JQuPbK5/DFa1v4/QQCfdpCYOotpITXjbDL1x34CkZXHrQH96DJnSbcKaXPlT5GcACZQboPdvPVgwFDEQJPAJWeChPuNxY
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : BTN_sauvegarder
+    identifier : 0x2f15110801dde48f
+    internal_properties : BQAAAAUAAAAhDNwGtZ7XENN3i3Ryg4gxi+UxcqbB2m9N6+nuAinLxqBdH3wwmi1TCXVjI24jSd5STwXgv4iRYwCrMOCCDzXC/Xe7VS3JA/uAYbXh0Ux8RzHzgZdqUnJBVztnarI8t10S6S1pYgBiLNv/PQIph0D24CSw15MdPWhVLL5p6D9anZzEuouTZLKoEvJWTYorosMXhasxb5Ow4FI6YxLFR3ykD3v64J9v6tVqPaE3CcfuauHANj1KCHpNr3VtPFQAefmIitaUv4AufdFcI9k7ZV2D2NqbmN8T/lb0Uk6r4X1L2bcyXcBaerh8o0963rfEvkNc4yP4zm0yOEwO2udKVf2+OHF5WqQkKBdMECFQKdETn2gbOHAW9ZufWA1jCwGgHJ9y8Lmwn6q7flboqL5dRVucua8gzUB5k460ccoe4c4Pb6XeNDIYD+z8AK7GBmKy9jKfN8ALB7mgDzW3IvMoLWSuYGZHuAdWlshowCsweBh2TeMd/cufuGsroeRMHX702ctgjbjdnYGkz1LwEoKcwnZT8fS5nnr+bLuFjINhe3XAyd+AYZYpJmC9kMWzfRgIuAPqZQy9yyWZWuantug/XhRj/eV4TSiMRoMp/NV6vL9R+WQ/7pzcSpiTkbEZ89O4MSMgyBM9qowSLQNbe2Ptu7sTFhd9Ww3cnxiuNWwizVmV6esfsp4YOVBFkIPkRRqTIDJF24I/lr9hMJ8tPpcQcA1kY4E5hhKWyHjUa+J5eVah5VijkVEQbPUW5p8KwRVXFHKHiNJhAB7KDnx+iH7CJQL34b9DqOwfodITuA3ab2zmXNd90NIEqDSHmEzTMmJXSG95jNHMArUK3D9SBBOz8Dnmkk20t7KSc9CY7gG5FgZBj1cHb46N2DFHqq6VjYOwXNQF
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Bouton en validation
+         
+        type : 14
+      -
+        code : |1+
+         info(gsCheminsauve)
+        type : 18
+      -
+        type : 161
+        enabled : false
  menu :
   name : _Menu
   identifier : 0x292573e513b5f221
@@ -22,15 +52,87 @@ window :
  popup_menus : []
  message_bar :
   internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+  controls :
+   -
+     name : CBM_SansNom
+     identifier : 0x2f144d4105a92039
+     internal_properties : BQAAAAUAAADgyZ/2F99N2uesN2MFBEGjTWPchyKTiNObouQaIeq+JDpMt+D4AEmbERzyp7hAy3686fuWLPzIc5nCiCQmtabxDlHsUIQdiUg=
+     code_elements :
+      type_code : 62
+      p_codes :
+       -
+         type : 15
+         enabled : false
+       -
+         type : 16
+         enabled : false
+       -
+         type : 39
+         enabled : false
+       -
+         type : 17
+         enabled : false
  code_elements :
   type_code : 1
   p_codes :
    -
-     code : |1+
-      PROCEDURE MaFenêtre()
+     code : |1-
+      PROCEDURE MaFenêtre(gsLienImage est une chaine,gsCheminsauve est une chaine)
+      
+      récupèreImage()
    -
      type : 230
      enabled : false
+  procedures :
+   -
+     name : ProgressionRéception
+     procedure_id : 2239499435381597303
+     type_code : 14
+     code : |1+
+      PROCEDURE ProgressionRéception(TotalOctet, TotalTransmis)
+      Jauge(TotalTransmis,TotalOctet,"Transfer en cour...")
+      //Message("Transfert en cours : " + TotalTransmis + " / " + TotalOctet)
+      //JAUGE_SansNom1 = TotalTransmis/TotalOctet
+     type : 458752
+   -
+     name : récupèreImage
+     internal_properties : BQAAAAUAAAA4Y9EJTZMq6fDjoyn9Ib4equhRrcMYpEyBGBabNvkBwG1cpwoYlj7tFeHhuzQttR6rvfbKwjUSCTQcEy6ReGNSYia0oWNMRgsmYjZ3T2V8du89WO1oYuH3Ex3WwogP3Rf9MHXD2Qcs1JNLcqqvzQpT2yqiHhq2x6rjT03LO7Guzyoo
+     procedure_id : 2239500023792187834
+     type_code : 14
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //récupèreImage ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //// Procédure automatique :
+      // La procédure est exécutée manuellement, lors d'un appel dans le code
+      // Elle s'exécutera dans un thread (sans avoir besoin d'appeler la fonction ThreadExecute), sans utilisation de HFSQL
+      // 
+      
+      procédure récupèreImage()
+      
+      requeteImage est une httpRequête
+      reponseImage est une httpRéponse
+      requeteImage.url = gsLienImage
+      requeteImage.AvancementTéléchargement..Procédure = ProgressionRéception
+      
+      reponseImage = HTTPEnvoie(requeteImage)
+      
+      imageTMP est une Image = reponseImage.Contenu
+      
+      IMG_SansNom1 = imageTMP
+      
+      Message("Image Téléchargée")
+     type : 458752
+  procedure_templates : []
+  property_templates : []
  code_parameters :
   internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
   original_name : Modele1

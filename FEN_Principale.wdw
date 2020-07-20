@@ -30,8 +30,15 @@ window :
         type : 14
       -
         code : |1+
-         TableurCharge(TBLR_Tableur,fRepEnCours() + "\fichiers\Fiche_Import_Animalerie.xlsx",1)
+         //
+         // TableurCharge(TBLR_Tableur,fRepEnCours() + "\fichiers\Fiche_Import_Animalerie.xlsx",1)
          
+         sCheminFichier est une chaine = chercheExcel()
+         
+         si sCheminFichier <> "" ALORS
+         	ouvreExcel(sCheminFichier)
+         	SAI_Fichierencour = sCheminFichier
+         FIN
         type : 18
       -
         type : 161
@@ -39,12 +46,19 @@ window :
   -
     name : TBLR_Tableur
     identifier : 0x2f07ebbd02166627
-    internal_properties : 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
+    internal_properties : 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
     columns : []
     type : 114
     code_elements :
      type_code : 137
-     p_codes : []
+     p_codes :
+      -
+        code : |1-
+         
+         si SAI_Fichierencour <> "" ALORS
+         	TableurSauve(TBLR_Tableur,SAI_Fichierencour,tblrEcrasementAutorisé)
+         FIN
+        type : 258
   -
     name : BTN_Imprimer1
     identifier : 0x2f118e7101bb8db5
@@ -71,7 +85,7 @@ window :
          
          //Lancer l'ETAT_impression
          iDestination(iVisualisateur)
-         iImprimeEtat(Catalogue_fiche)
+         iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
          
          
          
@@ -85,7 +99,7 @@ window :
   -
     name : BTN_Valider
     identifier : 0x2f1193a701d2e6c1
-    internal_properties : BQAAAAUAAADUsvhb9WHdEljN0A1FQH8FdHa349XUQVOEMyYhFtPq1qU8qVn6iN8wDn+5iCiU4cqueMfiHL+13dDm/FIR3QXttp58hXI6DCNW8d/txQK5eHqAlLq3X70GHKqPny7qA7Ee69O7NQCsIdxSQb4uZpXqnVQYncOvy4lS13SqFOJyeogAb9e8BSjg5iFXexlsGcBhS28bq4C2UlaCj0mj0l5id3zFBldQ2bhgc8DEfOcBGTRtz1c/OITDEEmjWZivafXwEohj/bus1FlowCaObcFF8rsq62H/fcb6hfDQDPoERu+iCjfULExJatKhtUve9hFr1cwZoRIh9ZUeUYLTiwEFXyEcmKt7FU30BEW85WNhE2TRaa8UzeThVD6sJ0eOicai0aZLfum6z8fEGVT0J25BbbJ+XavL6aozFtkrpuLD4h65yxSi7t21al3S2qxViwwB2zC+ldbYll6cTyHxaCRPVgvo3dJCNquUYJXSsZQmvc5fO6TFz3zniEnEQ5WvCoI3yJ542wInJIJ85+MTwRkBaRyv33EqIvdlcJOnCTL5oyau787YhhLkdfEBkt2mX2HqIufB9vu49N2DBhx0OaQVvaVSqbiW2ypCUoYcBqXyCCvKa+Mezft8jS9WRJNQWUtTE5wOzU8YQ4ahmHbGMFbRM2++mOiFkJVJ37HhCd9I+eTDYx919RfgADnw/rkYZvPSVCDOjgotst8XV25ZkUPuhVxEk2V9bNO1oirAZ8paPsUMs6zZVRuxxxhSQQHS6mzuLnI65+e4UdlPLHjW9ZgM8DvSoWF7ITpzArgyajlkDVBz6C96h3akiUvvbS93lNT9OimaiPZE+ZGYYnap6NXoOK//EeVoeOxtobCf/MbYz4dJL+e5QV4+TswfwO+p8G0yzYJRH8kchYmaq0uH6CWWy9cezmpaKhNJUhQvlLHPkFx3BU4L9A7gdB/WmL+4j3sg8ppxJ1JUtQJS9dezO+T3qX28Z2SN1MdV7Ki40k3eSl7vM/iQ4w3InVxrJowlszKSIDnhml/jYm3KOy2xWw6aK2mDpsxh7qQS1aeTxw==
+    internal_properties : BQAAAAUAAABdLVwRAefaGIaGzqUdLwtIbYz0GF7phiYExd/VvZByvk4Uwzk31wr2QdNEVIrskHTIz7D9N//zNAzuK9BiIGPirz5LHVQxsgwkaBg0VsnK57COqe482WFBLFFv2Vj7iIPISOannpRNWnSJA/iQotqvu9zNff16bvQwmcMfBpF7uVP/qgtfCEVI+bbGmVAmGnIb8pnvx5MOZ+WMGOtsDhRiq1anGnyd9vEee64hGsUKvMwmZeHSyGI0TPhe6aPWgOviHKxVYhYdiUgs8h37s0Dxedrt6MkMajrpPlQGpmdtmWpwWT3cu73wY48ZdopM7OvuKks1UiFv2rsS1akLDOouwoytrgv1ayeZ5yt4Q5u6IPGNmwWNVori0PvlQpWIiZO+DWRbXIIcRoW52O/FxVZhhMKwOk74KPeheeyF0NuEk2LUzgkGvVWQpHh4hu3cIBDlUv77QZ8evo/CrFdjr98y4bOtrN26wQrM8o7RXMONNrlRc62/lvdTZ0bkM0dfgTW5BT9yyxW3hq5DcbukhmrtyzGG3O0jn6BfoON4X/7J1IBpUKlYJ/s1G++vF99e89TupUy2nrAR71+pTE8k2WgKx+CfBqzF2gPoLiJj7Dv4Ja9fmn7UuDqdFWnIIWG21xgfGq1LHQgBnlQ1ZKteOFrAtXx1AwZwVzq5pxGsTymKhIbq0NYX1lzTtgNSKX2qeIzkbesV2r9KdT9Pf6MRpSvDa1eBFpnkJ/xpwqIr+RZCA3sRvlm/QrRqf/SOWLmitoEQgSddH5S9VqmPFJGsB9o9cECJwM0sfr8TVOKBHqeCCtgsL4Zghum5bfMnZIX/KHu5G+CjBvcRyj8muLdFpvtJJMokHJPLX9GT0dhSnC6kfEFobFS1QgRnHfXg3GCuEWVXjSBpQv3WYdiv6Gd0oaY4wMnSMLkMhteMh1EtdWzwWDnf7yR6ApGFTY2cCYnYxeGkwWrIXKhe6v+tCHdxc3pUK4nnAlkEOVq6etZk0Mj0FZtZctEhgbmezjNRFDW2fBfSAn30ydh5md3no/q9G+AOi38ndaaTqCozwsl2IRBvQtc=
     type : 4
     code_elements :
      type_code : 4
@@ -98,7 +112,7 @@ window :
          
         type : 14
       -
-        code : |1-
+        code : |1+
          tableauChaine est un tableau de chaine
          
          
@@ -109,11 +123,29 @@ window :
          
          numLigne est un entier = val(sChaineUnique)
          
+         sNomimage est une chaîne
+         
+         
          si numLigne <> 0 et numLigne <> 1 ALORS
          	chainerecherche est une chaine = TBLR_Tableur["A"+numLigne]
-         	Ouvre(FEN_Recherche_d_Image,chainerecherche)
+         	sNomimage = Ouvre(FEN_Recherche_d_Image,chainerecherche,gsCheminFichier)
          sinon
-         	Ouvre(FEN_Recherche_d_Image,"")
+         	sNomimage = Ouvre(FEN_Recherche_d_Image,"",gsCheminFichier)
+         FIN
+         
+         si sNomimage <> "" ALORS
+         	TBLR_Tableur["O" + numLigne] = sNomimage
+         	si SAI_Fichierencour <> "" ALORS
+         		TableurSauve(TBLR_Tableur,SAI_Fichierencour,tblrEcrasementAutorisé)
+         		
+         		SI OuiNon("Voulez-vous Visualiser la fiche ?") ALORS
+         			tableurVersFichier(numLigne)
+         			iDestination(iVisualisateur)
+         			iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         		FIN
+         	
+         	FIN
+         	
          FIN
          
          
@@ -121,9 +153,33 @@ window :
          //pour TOUT sChaineUnique de tableauChaine
          //	info(sChaineUnique)
          //FIN
+         
         type : 18
       -
         type : 161
+        enabled : false
+  -
+    name : SAI_Fichierencour
+    identifier : 0x2f15138f0220c251
+    internal_properties : BQAAAAUAAACfspGFUTuxkjphWdNLxTrobl957lGlHDHAoeUfDSitnfbcM0tWx27gcBAx+90QJtKO6v8c6MulUMXOJ/1QiRsUefgy1Va1LuJ8pukLEKtJNJRcERy5Xfhqn2W1lxzuLO762/pzBzc/5qTxhoNe+xptOnimVrT6CKydWhVuNN7PzcirmIs/4wZLgwKpjmbTj4yHSNHdtzuMY/fJmaaN08VyWZj+3IwP6v7PMXIgTJ0wXxKcf28oniEuh/kuYrpedLABCudWcUQ+bpEvG2Z5X+tVJSyeCb8JSSm+R32Op9CkkbbBvj8hz0O4GjLL1v0E/KV+x/YVmQaNVTaVHXu3ocC0YE3bPkKs6RBLzIaWHHts1AZNKbLiwLQ9xNbxcweTZrHSbkMxoziBV3owHNe95yv3qwNVbXLfgdScHyJ0sg9s7O4T3p3sHZpBrlW9DOOE/xTr0zFMWWvojwhobxiHHdnbN/AT4vJXnYxtZlagmfb3r141un5lKXv8T7fUVXtIMo45fz0PKCxFynjc2OXdE/lbhFe/T+xFRJPbkpfX6cii3DYFjGMMxir78ugprwZHxo9hSUQq2QXXaUAssn0D0nCvs+8ffauX4MD2i+Vcg/AauWSMr8vq0jgUsWN0X5BagCU7ZBDxlvOTqiknQGUZ7pL3zg+fLrqlOi8nXJ/8pZhVc7azXdnzAeKN9sLRkPSbKwDUP6cRgfPDUz/xurU+d2jswGyNBWK2g2Gpqr4L67Nz3T+nhhYChVeWFzKr1rH1iTEkfYHr5d0Z97Irse1O4GQs7nUjv9mVljyR5uDhGWfbzsszHfWGNZ/Ogzi2yOeXIOehQYrtiVVs7yT6wHvT5np4Ly+mRMtVu92PaIZiJiQckrb63G4pVd6vdMnaxAD+E1OEvokCb3+bq9iyT7U2QioS234HyR1z6ZLyV8INxdc04ue0UE+UQzANMtxpTxfHIJPS6yiNK+v+r03IY2LkyWnfplQEFVOBuZ3q2JjdvaFE5Y7aFjt3Z2DwJ5ZSnlDSi1OUoykqFtlwINJoq+EfLJI5mamGVW3XdKZw5gEyiN39K+vLXOPG2438JCzIq3Ze496xaW1SRweQKGI0vKXDWv8eCRpPUV8A7VI7lspfOlP52v1pWgMbO28j9jsVYw+lQpISzAOLKWoYNRqOb0unF5RCcQeKwnN8KNV0KYloUZ7ecpM=
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Saisie de texte
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
         enabled : false
  menu :
   name : _Menu
@@ -139,11 +195,25 @@ window :
   type_code : 1
   p_codes :
    -
-     code : |1-
+     code : |1+
       PROCEDURE MaFenêtre()
       FEN_Principale..Libellé = MoiMême..Libellé + " Version : " + ExeInfo(exeVersion)
       
       vAriantAnimal	est un variant
+      gsCheminExcel est une chaine
+      
+      gsCheminFichier est une chaîne
+      
+   -
+     code : |1+
+      
+      si SAI_Fichierencour <> "" ALORS
+      	ouvreExcel(SAI_Fichierencour)
+      FIN
+      
+      checkPolices()
+      
+     type : 34
    -
      type : 230
      enabled : false
@@ -269,6 +339,94 @@ window :
       procédure interne videfichier()
       	HCréationSiInexistant("*")
       	HSupprimeTout(fiche)
+      FIN
+     type : 458752
+   -
+     name : chercheExcel
+     procedure_id : 2239722352765344391
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] chercheExcel ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	chaîne ANSI : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure chercheExcel() : chaîne
+      
+      sFichier est une chaîne
+      
+      // Ouvre le sélecteur de fichiers
+      sFichier = fSélecteur("", "", "Sélectionnez un fichier Excel...", "Fichier Excel" + TAB + "*.xls;*.xlsx", "*.xls;*.xlsx")
+      
+      renvoyer sFichier
+     type : 458752
+   -
+     name : ouvreExcel
+     procedure_id : 2239722357060377708
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //ouvreExcel (<sChemin> est chaîne)
+      //
+      // Paramètres :
+      //	sChemin (chaîne ANSI) : <indiquez ici le rôle de sChemin>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure ouvreExcel(sChemin est une chaine)
+      
+      TableurCharge(TBLR_Tableur,sChemin,1)
+      
+      gsCheminFichier = fExtraitChemin(sChemin,fDisque + fRépertoire)
+      
+     type : 458752
+   -
+     name : checkPolices
+     procedure_id : 2239822614481259133
+     type_code : 14
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // checkPolices ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure checkPolices()
+      
+      sChainePolices est une chaîne = PoliceListe()
+      
+      bRésultat est un booléen
+      
+      
+      pour toute chaine sUnepolice de sChainePolices separee par RC
+      	//Trace(sUnepolice)
+      	si sUnepolice = "advent-Bd3" ALORS
+      		bRésultat = Vrai	
+      	FIN
+      FIN
+      
+      si bRésultat = Faux ALORS
+      	si OuiNon("Voulez vous installer la police d'écriture Advent Bold 3, nécessaire à l'impression des fiches ?") ALORS
+      		LanceAppliAssociée(fRepEnCours + "/advent-bd3.otf")
+      		
+      	FIN
       FIN
      type : 458752
   procedure_templates : []

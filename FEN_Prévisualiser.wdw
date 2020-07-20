@@ -10,24 +10,53 @@ info :
 window :
  name : FEN_Prévisualiser
  identifier : 0x2f144b7705882339
- internal_properties : BQAAAAUAAADBxUQzRkaKIH7WvQ+0CI7I9LKA0PWQAiM0ehc1z5rZa2Sa0JlRZUUFyQ7FEe2z65opp/7ITWn7nv+vbcLdXQsx8/lHnP7uyjFvWppbkkzxiF/hAm8YnqJv94Llwz/um5HT/EPWKRLYOKq6Y7Ex731CzYaKBoHLmVeTzP2miXYCj4RLHxuWfcQmkB6PJbW5p2mDNCG1M8p24lR5sZ3x0eIVf0BBXn8T+14tGtVrm7aii19UAb7mX2MOQBBXNGLH2dtUPNdLY4Q2H1n8Hf0CRcnnQXHajbxdiZ8cQ2R87/6t4k29aLWuszcXge2MM5qi0dSSIwfKeDzmmT1TE50efbNKdheEbTG14lmzgWi6FFeRlnZbXq29dsl86uGu8NFyQWk4ulTKyQkQUbYGC5ba673BPVMApFsAOwP7Ech7/3BrnHmW5UVPC8nIYY0ZXv9A/BzEQVhRtyARpTS7MoPq/EqolFOmDcaAj46EBaQ88z3YFxHjx5HaxAUcxCRRCU4JwboZYxmaCGMzGwxt3htPVDPcyqQ99YZ6opyXOWjSdAqd9FnVC7NUFNA0jy9dAQSToAeaGdiQukajBT4PnJfTFsGsgDqpOaoJ3Lv52YEA18KAUJSM5toScTCHjtBf1Wxx6SPeZQT6uUrKclDgjOVEdfRNJR5+AzznFqsO4QbdT9NNMHE2cw59JnywNbbJuGqfoquJMw5qc/YoPyFdFXBCyX2Xwm2T7f6n0Dt5cqWq30uy2gQOajNt2IBio5WEZuFkjL1q5tVuOm22OuGD0Tjg5i8M870Cutrf1Ge69ZZdi8Qu
+ internal_properties : BQAAAAUAAAATjHiKulwR8n4IyavWeapUuMSUuWeMdqKsgeF9kqd0V61XhbXF1QCWhIr9MpKdFXmUynbasS6DY/4ZB/5v5l+WesY7VHpmKjV3urojFvQJDNNms0vfQhpFPZi3u2U+iSOHxieweyJkRkioIcnf7/tUNZjivNdvkZm9nivSExwYoZQxD02cTfBgSpDdUePF1QNr1rVTXR5mhD4zGzlnbVx7t/aRSM3DR7CPtLsfqarMsa5cu4k1hyuKvIznJG7nWX+ImLPjl8xm+42w9a0mleED5d0u1eAt2eP4X2QUQwYtLhnh7GV6QzcrvSnE+y7CCZje74PaZKy+Bdnfo/Xy1Rs2ont4lUX96jW/TagCuHdpUopfyr0hFkF4XkV+UKXaOe28JvCSJUFQZUp6005Wg527t9neFvEKbSHFX5Y9kfrlFvMEQ+elnUOeQ9PfEGki1r72f96rFQLrO1YZoOVkbtzaNvHE/0y6oTx+I6I2hYcqAfvZ9SPwZq8CptL/W0BD4zzrsdcsphXtkX6bnF1ZJr1OLAqb9yzE9HrJ757sTizvputrkT3qPuLieRUkT5aLZ3L3+C/5B6sE5tey73qW94SzGU20breaWdDaHER74tPXC9GzRds3vnlAd9Ny8H9yzGIP5u0BqNlVPW9dCeZ1KLWSaN+3ei/2GWoJUveiVB46YQBDwIEgkdsPVONVxJExLNVTESz8uWzKHRtLc0pkDPmsxefvhVRXlSc7vwBJjs3L9F6whQetMEEGeLbt97fXCnuLGkZNqf2+wZpcCF5CmnuYT1QrT+Oaf9hkD/pcUhZc
  controls :
   -
     name : IMG_SansNom1
     identifier : 0x2f144b91058b88b9
-    internal_properties : BQAAAAUAAADHjp7xXEs81A9e6wrigiYT1KEa5kIbnDprG/Ot9yqeOGG2WUX05RATyc95fV7Gc8kiLf+ZWAVSvwVybRa6pLSLxIH22a/z2+W33otiVSH2h0mPMzX7rnm6hVifk3lr+bMpZOnMepecIl33z07LbTL9x14qlrfKYVY4OTZKd86s4G9a4tb5mDajsy5/GRDc2aFJH5BIcw0F5EphvpUEBq3LlJm6ABm3D5PHG6PI4Yfm93LpD5KH3oCwFMuzHG1IES864vFXXfVRXTRHTO56ZegsFK79aU85ntF8Dsi6h8VBME8wNsLvxc6Z0prNVWV4/ASA3z2wRse1MHsuNDpJ1SMG3gXzaCThXFvR7fNM6kH9elklW3DhE/LDco+gukYdDYJf9NCyNo4nPivEZSgnN57XC9GxdjVNJWF3f5RFR6Wmki7/z9cspiZMJxSXcVQRQ/B47ToNxkdf+Ooyex//NaZ/J5Qyk8/uFXMFpzhX90nMAy/KgU83rQ6DZ6Qp7CdXhdXCBGKMxXXy4Muzehh+mdE6SF+X12MocyCFsMtgaO/3e8V7jXOpAhEVJRTabJO2jH6KZc9ba11yG9cYaB/SykQQYsJmLMWu4q7UVj7khJ7Ta8vYwzJJkYQQjfXTWBVqmIElWywW3tYqMNIZ9FuAT/1t4gFk5SEZ4JdnAh3jT287H4pJ9Yg5c3TUBBReM0d+F46Kb8Xnc63HVx17rO3LFlfwUhB3IT3BD+D6g50Pzid/eOtVsH7f1qCQ3Ii0OLtFfucsFUxbl0Pm4X9NO2A=
+    internal_properties : BQAAAAUAAADJa1xw4Oiz6DaMK4+SH9uwDf8tYbLNvZ8DVn8iaIPkMx2empiaRQTNw7vpcZd2ZPq3+QAwLysNxyvosBeDOZXn8K43UhMO9ur+jqeWX9ZST4BOv3NX2doAYbFFMel4tzjZl089RbpLYMNLagqkVu8jAXh49Pbt89J6mFRg50wfjkrIXdgaILOSU/DwfSvZsfvwtNXo0hFx2QYAUVGf/NxjBYM+SNcCF76zan94PmgMAG5LjBkWo3E38UR5FRAZyQ0GUP8CLntpGQPYjEEQblIqbL1sahFyoiJyJTpT13cJ8+QNADtjGiOMPQfnaf6IbKQUgVbP1KI0f47U5YuoHRgK5NHIYJfTEUXTmXd4y/EqRSe0euUMnvE9dvMwprUZZYI7+BML3O783FlkNeVUbNqdLb/8pVuBmoGxXySmXbtKj8GVTSX/zXD5dm6Dq4l1J2TcK5SLK8xkWgoaSvj7AxHWCqKU9/tlQytvMZVdlV6OzQfDFLl5ADiTfzH570NKRTHNTRX4PCBj0Ef9n60QB+1Nj5bOJYcsbOgEsTkLYaRtFeQ+6RW5FFdgxgWjlVi4HY9SKR09TxHDBxUbzzgpi6jzdTqU/7wwBMggLJZyLg6bWYaERIkZlc+wO+N4BM8Qt8IK+XaIikMPeMPobq4NkErawud/fI4nDTOUCRW5qlDj5XI+gOEAmIZsWsZGJuJWdHTx5YdbLPoW3sSt5y8JQuPbK5/DFa1v4/QQCfdpCYOotpITXjbDL1x34CkZXHrQH96DJnSbcKaXPlT5GcACZQboPdvPVgwFDEQJPAJWeChPuNxY
     type : 8
     code_elements :
      type_code : 8
      p_codes : []
   -
-    name : JAUGE_SansNom1
-    identifier : 0x2f144b9b05a2b23a
-    internal_properties : BQAAAAUAAAAheqlolmAsmbdGRfdS9vgMtGZr1jEhWa7w168M0b3FsSYls1i1Vt3bJbax/8rE9l6KoOOs8APyb8WDCyBwzwYXz2oKs6QOtE1h+YZJDpvLz99Cmu1RafWvsY9a2TxcjmAveey2RAacqXch7infre6/ajuARC9relbPLHZpW/SQd2CYv1a4gkfxh0MqS2ebSr3kVYps8JO5XFsfGGvTE6ZfMoKSr4nSKWkRqRYMInvPMIf9nNbyudSFacvGEbMmNgAU3WZIPZ0nBT9P8de6Keyi4ih3ffCWCyCURxdlMdkrgss5yD0NgHWDjlGZ1Dnqb3y4th6izroHc41V85QWNpJX9WIKhj8WKJqPDRk3lE092/Y7sUKqngRPk1tLqYjmUSeoWwk090I/xXyiqeEdwhflxhYBuPtdPtCa2tVcoY1Iv7nAXy6Xnxyui/2yzmoOFBB1MCuoOxHyq2orOVD4PgQQSicGB16oQBwtkuOqmYaVCyMKUP6BoCkjd6ACJPlJ+KuNepTzX02m4Cqpo9zmf4O7OK2t8KwU/UmaG65tfM2ceVXeFSDiI5oPs+Hvbn+fkHwgHcwEBit7qHTjy97UuFQDJBnxMCGiUckpbHXcC/BuZ/Xf8KAj+TzKuywkQlvRUhwGLeOFDW9nJucY50DINqpl0NsloDmzsTpEyQkon40RW6yu21TJKHh2I0F6O2L/MQGzty8JI/1/WbMAHXP5eZkMAuyQYBgIDpuQe/5PA3ijXUbrx5fpe4ggWJMnwUgYCEQ1UAghAdaYfrFmSXc8sMQKk/qbwsjeI4GiIC1eKOTv88LiH3ygNQHe9LpRxTIYqE5v1PYXgtv5xBRqTQUy4mLMaW1I4/IHK44yabvUAFlK5TZ3LNs=
-    type : 10
+    name : BTN_sauvegarder
+    identifier : 0x2f15110801dde48f
+    internal_properties : BQAAAAUAAAAhDNwGtZ7XENN3i3Ryg4gxi+UxcqbB2m9N6+nuAinLxqBdH3wwmi1TCXVjI24jSd5STwXgv4iRYwCrMOCCDzXC/Xe7VS3JA/uAYbXh0Ux8RzHzgZdqUnJBVztnarI8t10S6S1pYgBiLNv/PQIph0D24CSw15MdPWhVLL5p6D9anZzEuouTZLKoEvJWTYorosMXhasxb5Ow4FI6YxLFR3ykD3v64J9v6tVqPaE3CcfuauHANj1KCHpNr3VtPFQAefmIitaUv4AufdFcI9k7ZV2D2NqbmN8T/lb0Uk6r4X1L2bcyXcBaerh8o0963rfEvkNc4yP4zm0yOEwO2udKVf2+OHF5WqQkKBdMECFQKdETn2gbOHAW9ZufWA1jCwGgHJ9y8Lmwn6q7flboqL5dRVucua8gzUB5k460ccoe4c4Pb6XeNDIYD+z8AK7GBmKy9jKfN8ALB7mgDzW3IvMoLWSuYGZHuAdWlshowCsweBh2TeMd/cufuGsroeRMHX702ctgjbjdnYGkz1LwEoKcwnZT8fS5nnr+bLuFjINhe3XAyd+AYZYpJmC9kMWzfRgIuAPqZQy9yyWZWuantug/XhRj/eV4TSiMRoMp/NV6vL9R+WQ/7pzcSpiTkbEZ89O4MSMgyBM9qowSLQNbe2Ptu7sTFhd9Ww3cnxiuNWwizVmV6esfsp4YOVBFkIPkRRqTIDJF24I/lr9hMJ8tPpcQcA1kY4E5hhKWyHjUa+J5eVah5VijkVEQbPUW5p8KwRVXFHKHiNJhAB7KDnx+iH7CJQL34b9DqOwfodITuA3ab2zmXNd90NIEqDSHmEzTMmJXSG95jNHMArUK3D9SBBOz8Dnmkk20t7KSc9CY7gG5FgZBj1cHb46N2DFHqq6VjYOwXNQF
+    type : 4
     code_elements :
-     type_code : 17
-     p_codes : []
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Bouton en validation
+         
+        type : 14
+      -
+        code : |1+
+         si gsCheminsauve <> "" ALORS
+         	
+         	// Initialise le générateur de nombres aléatoires
+         	InitHasard()
+         	
+         	nNombreAléatoire est un entier
+         	nNombreAléatoire = Hasard(0, 9000000)
+         	
+         	
+         	fRepCrée(gsCheminsauve + "Images")
+         	
+         	si dSauveImageJPEG(gImageBrute,gsCheminsauve + "\Images\" + nNombreAléatoire + ".jpg",70) ALORS
+         		gsNomImage = nNombreAléatoire + ".jpg"
+         		Ferme(FEN_Prévisualiser)
+         	FIN
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
  menu :
   name : _Menu
   identifier : 0x292573e513b5f221
@@ -62,10 +91,20 @@ window :
   type_code : 1
   p_codes :
    -
-     code : |1-
-      PROCEDURE MaFenêtre(gsLienImage est une chaine)
+     code : |1+
+      PROCEDURE MaFenêtre(gsLienImage est une chaine,gsCheminsauve est une chaine)
       
       récupèreImage()
+      
+      gsNomImage est une chaîne
+      
+      gImageBrute est une Image
+      
+   -
+     code : |1-
+      
+      renvoyer gsNomImage
+     type : 2
    -
      type : 230
      enabled : false
@@ -111,9 +150,9 @@ window :
       
       reponseImage = HTTPEnvoie(requeteImage)
       
-      imageTMP est une Image = reponseImage.Contenu
+      gImageBrute = reponseImage.Contenu
       
-      IMG_SansNom1 = imageTMP
+      IMG_SansNom1 = gImageBrute
       
       Message("Image Téléchargée")
      type : 458752

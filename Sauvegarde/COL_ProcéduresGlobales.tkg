@@ -95,7 +95,7 @@ procedure_set :
       	POUR i = 1 a nNboccurencereponse
       		vAriantRetourimage est un variant
       		vAriantRetourimage.ImagePrev = vAriantRetour.hits[i].previewURL
-      		vAriantRetourimage.ImageWeb = vAriantRetour.hits[i].webformatURL
+      		vAriantRetourimage.ImageWeb = vAriantRetour.hits[i].largeImageURL
       		TableauAjoute(tabLeauretour,vAriantRetourimage)
       	FIN
       	

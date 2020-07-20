@@ -10,7 +10,7 @@ info :
 window :
  name : FEN_Recherche_d_Image
  identifier : 0x2f14379701cb82ba
- internal_properties : BQAAAAUAAABsm+o4GnH5zhrettIJ4h8xazw6uyLhBZakaFm5H6o0ik5KEUbNlhJNQDynV7bTZ+47cI2n7GO2nlkJTDnzt0VgS5klRrMKNSjDbJhX8/huxB6ZY+AzmmmVrEX3cEb7nx2lm3+17+ApKU97fyNDmc88WdiIMCKPWewD+FjVNkpm09j1b1k+ID+aBkWRHGPB4PjlmJ+owYtwtdO9jTuU9NEl2lEilUfkmKQMj39e+y5Fy6ckf304sztYRjo8Bq0752HfO3ZlT7zpB4j+H7mQzH2oYE8KPYqJT9i5Eh5BpNPQt4F3HuuxO7ph0qzMxi5URQf5MOlasVUIaQGC6tA+LB3cRPEDkBM4N8WZMH8gioy5LDfxNKLrOuP8Izo3mR/1bBVJ2jgw3qvPEyaDAeaGunRKIVCHvFSS7Wxst8kWv2p1E/1RkltcI4v6A8SlUna/6fa7n6CGs4HQooNNEVKEvpJLvQ+8NA7DsCA2wz9r0cWmxKtmnN8bOR4PlP32wBbWcQBe68fLGhTMyZMycDf/sMtPsKRJCdqqZbWmUQ2bDB85o1UetSyDIFIMgjUJ5qewFmENUejFcmnxp1GqfwnKhF376luYk4iNxA6TwYK/n2e76qzftm74riOC9HI59H8sivL3bksOwEa2DTL8syKGUedNcSag7dHnN5GsnXSNhfiCq05wXxQ=
+ internal_properties : BQAAAAUAAAA3weonjXNuCysRg/hLdvp/o3MOwEjMtubTTTLtv3vBiAil6dG/hGMtMhNZ7S8xdO/6v8wAQchHM7aPuxGb5SsrLvWcPRBIgPYhkabhllyB3O5fwuG4go34Is4bhkwLhMUQQkddlfn9gTJQpYjUR4Js7ga38CbmyhG1E/2gUeWcWlxj64dJ8zrcBBlk6eA8s/WHvql99JH1iQXBy+hdyxmc9Evvf7WaFS/c+27/u/kuR89hLsV1H3zRPX43VFdKl7F1gvT33e8BsDP3Mq3MYBMjqqWqegMmH3TXRdcL+i1dfegtPnLPnE8SYa5IhSOskQtQHWAhSJnmSNyj7pfDCe1sKfz4WC4w+KIKb/unFjyFdFj0gCQrZldsnitZiUHHwqPoWxg6qsOTQ6UsTRiuviqA+kOHonakL8JF2rvcQRz19zIkir/ayeMGwjk/8IqvTwT8LgTeSQc8Gpxc0exYts5bbpaqPBIrWo6lbHHZe0/M8oqj+G13SWyRwWiKHKIGc8Jf1uMF0DLMjQdks4ZC5O0hSTtPAR66qXW1znNT0oV9W34M7D8FZpsXorXv8CJyBEe7mPx11atlmSHSYaFPRJ372QzkFcy+H12EH/GoCOmYqXVir+X326ei6hQkYqFdhRH8539bX+HPrWwaKw72nFrecpjDYoYd7OaQ7+gHPhh2nzCXbZLuJsVcjnQjY+WeOtN1AKIdFgR+ENLK6/A=
  controls :
   -
     name : SAI_recherche
@@ -73,9 +73,13 @@ window :
         p_codes :
          -
            code : |1-
+            sNomImage est une chaîne
+            sNomImage = Ouvre(FEN_Prévisualiser,ZR_images.ATT_lienWeb,gsCheminSauve)
             
-            
-            Ouvre(FEN_Prévisualiser,ZR_images.ATT_lienWeb)
+            si sNomImage <> "" ALORS
+            	gsNomimage = sNomImage
+            	Ferme(FEN_Recherche_d_Image)
+            FIN
            type : 18
     columns :
      -
@@ -165,8 +169,9 @@ window :
   p_codes :
    -
      code : |1+
-      PROCEDURE MaFenêtre(gsRecherche est une chaîne)
+      PROCEDURE MaFenêtre(gsRecherche est une chaîne,gsCheminSauve est une chaine)
       SAI_recherche = gsRecherche
+      gsNomimage est une chaîne
    -
      code : |1+
       
@@ -174,6 +179,11 @@ window :
       	AfficheImages()
       FIN
      type : 34
+   -
+     code : |1-
+      
+      renvoyer gsNomimage
+     type : 2
    -
      type : 230
      enabled : false
