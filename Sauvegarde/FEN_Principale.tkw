@@ -395,7 +395,7 @@ window :
      name : checkPolices
      procedure_id : 2239822614481259133
      type_code : 14
-     code : |1-
+     code : |1+
       // Résumé : <indiquez ici ce que fait la procédure>
       // Syntaxe :
       // checkPolices ()
@@ -417,17 +417,18 @@ window :
       
       pour toute chaine sUnepolice de sChainePolices separee par RC
       	//Trace(sUnepolice)
-      	si sUnepolice = "advent-Bd3" ALORS
+      	si sUnepolice = "advent-Bd3" ou sUnepolice = "advent" ALORS
       		bRésultat = Vrai	
       	FIN
       FIN
       
       si bRésultat = Faux ALORS
-      	si OuiNon("Voulez vous installer la police d'écriture Advent Bold 3 nécessaire a l'impression des fiches ?") ALORS
+      	si OuiNon("Voulez vous installer la police d'écriture Advent Bold 3, nécessaire à l'impression des fiches ?") ALORS
       		LanceAppliAssociée(fRepEnCours + "/advent-bd3.otf")
       		
       	FIN
       FIN
+      
      type : 458752
   procedure_templates : []
   property_templates : []
