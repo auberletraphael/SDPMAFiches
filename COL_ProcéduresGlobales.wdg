@@ -118,6 +118,54 @@ procedure_set :
       
       
      type : 458752
+   -
+     name : VerifUPDATE
+     internal_properties : BQAAAAUAAACn8E1OH5IocS2HT/uhHGu39IeZnNxyG53LKdTpmaYCvEP7pnYSpFu68EUgBuNQYrTfa+XMwV+ApEmdQ3pTQtTQd++7KGFWGGwWvhsx9XLugDPtQxMo04Gvw3GSd+7m1fOAYGEfIEzpfocslaf0M8FzTf675OnJeOOTGJjPzfK3b1IFNjz4
+     procedure_id : 2240569019667225467
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //VerifUPDATE ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //// Procédure automatique :
+      // La procédure est exécutée manuellement, lors d'un appel dans le code
+      // Elle s'exécutera dans un thread (sans avoir besoin d'appeler la fonction ThreadExecute), sans utilisation de HFSQL
+      // 
+      
+      procédure VerifUPDATE()
+      
+      	jsonApp		est un JSON
+      	sVersionApp	est une chaine
+      	sVersionApp = ExeInfo(exeVersion)
+      	
+      	requeteVerif	est une restRequête
+      	reponseVerif	est une restRéponse
+      	
+      	requeteVerif.URL	= "https://auberletraphael.github.io/services/verif.json"
+      	
+      	reponseVerif		= RESTEnvoie(requeteVerif)
+      	
+      	SI reponseVerif.CodeEtat = 200 ALORS
+      		jsonApp = reponseVerif.Contenu
+      		//Info("Version en ligne : " + jsonApp.app[1].version,"Version Application : " + sVersionApp)
+      		si sVersionApp <> jsonApp.app[1].version ALORS
+      			si OuiNon("Une nouvelle version de SDPMAFiches est disponible"+ rc + "Voulez vous la télécharger ?") ALORS
+      				LanceAppliAssociée(jsonApp.app[1].lienDL)
+      			FIN
+      		FIN
+      	FIN
+      	
+      
+      
+     type : 458752
   procedure_templates : []
   property_templates : []
  code_parameters :

@@ -85,8 +85,6 @@ procedure_set :
       
       nNboccurencereponse est un entier = vAriantRetour.hits..Occurrence
       
-      sReponcetexte est une chaîne
-      
       
       tabLeauretour est un tableau de variants
       

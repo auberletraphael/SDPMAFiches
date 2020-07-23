@@ -212,6 +212,7 @@ window :
       FIN
       
       checkPolices()
+      VerifUPDATE()
       
      type : 34
    -
