@@ -36,7 +36,7 @@ window :
          
         type : 14
       -
-        code : |1+
+        code : |1-
          si gsCheminsauve <> "" ALORS
          	
          	// Initialise le générateur de nombres aléatoires
@@ -46,12 +46,24 @@ window :
          	nNombreAléatoire = Hasard(0, 9000000)
          	
          	
-         	frepc
+         	fRepCrée(gsCheminsauve + "Images")
          	
          	si dSauveImageJPEG(gImageBrute,gsCheminsauve + "\Images\" + nNombreAléatoire + ".jpg",70) ALORS
          		gsNomImage = nNombreAléatoire + ".jpg"
+         		sauvegardeImageMin(nNombreAléatoire)
          		Ferme(FEN_Prévisualiser)
          	FIN
+         FIN
+         
+         // test sauvegarde miniature pour excel
+         
+         procédure interne sauvegardeImageMin(nBaléatoire est un entier)
+         	monImage est une Image
+         	monImage = gImageBrute
+         	dRedimensionne(monImage,150,110,drHomothétiqueCentré)
+         	
+         	dSauveImageJPEG(monImage,gsCheminsauve + "\Images\" + nBaléatoire + "_min.jpg",70)
+         	
          FIN
         type : 18
       -

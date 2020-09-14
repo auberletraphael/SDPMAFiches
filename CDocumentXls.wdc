@@ -1,0 +1,69 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CDocumentXls
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1f5db79c000e7491
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CDocumentXls est une Classe
+      	privee
+      	m_sCheminDocument est une chaîne
+      	m_sChampAffiche est une chaîne
+      	
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 2260164468653651089
+     type_code : 27
+     code : |1+
+      procédure Constructeur(CheminDocument est une chaîne, sChampAffiche est une chaine)
+      
+      	m_sCheminDocument = CheminDocument
+      	m_sChampAffiche = sChampAffiche
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 2260164468653716625
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : ouvreXls
+     procedure_id : 2260164868085768387
+     type_code : 12
+     code : |1-
+      procédure ouvreXls()
+      
+      // Vidage du champ tableur
+      TableurSupprimeTout({m_sChampAffiche})
+      
+      // Chargement du document Xlsx
+      TableurCharge({m_sChampAffiche},m_sCheminDocument,1)
+      
+      renvoyer fExtraitChemin(m_sCheminDocument,fDisque + fRépertoire)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1f5db78b0008349a
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

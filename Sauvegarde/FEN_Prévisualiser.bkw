@@ -37,7 +37,22 @@ window :
         type : 14
       -
         code : |1+
-         info(gsCheminsauve)
+         si gsCheminsauve <> "" ALORS
+         	
+         	// Initialise le générateur de nombres aléatoires
+         	InitHasard()
+         	
+         	nNombreAléatoire est un entier
+         	nNombreAléatoire = Hasard(0, 9000000)
+         	
+         	
+         	fRepCrée(gsCheminsauve + "Images")
+         	
+         	si dSauveImageJPEG(gImageBrute,gsCheminsauve + "\Images\" + nNombreAléatoire + ".jpg",70) ALORS
+         		gsNomImage = nNombreAléatoire + ".jpg"
+         		Ferme(FEN_Prévisualiser)
+         	FIN
+         FIN
         type : 18
       -
         type : 161
@@ -76,10 +91,20 @@ window :
   type_code : 1
   p_codes :
    -
-     code : |1-
+     code : |1+
       PROCEDURE MaFenêtre(gsLienImage est une chaine,gsCheminsauve est une chaine)
       
       récupèreImage()
+      
+      gsNomImage est une chaîne
+      
+      gImageBrute est une Image
+      
+   -
+     code : |1-
+      
+      renvoyer gsNomImage
+     type : 2
    -
      type : 230
      enabled : false
@@ -125,9 +150,9 @@ window :
       
       reponseImage = HTTPEnvoie(requeteImage)
       
-      imageTMP est une Image = reponseImage.Contenu
+      gImageBrute = reponseImage.Contenu
       
-      IMG_SansNom1 = imageTMP
+      IMG_SansNom1 = gImageBrute
       
       Message("Image Téléchargée")
      type : 458752

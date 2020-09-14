@@ -1,0 +1,95 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CImage_manager
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1f5e1b070047cf54
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CImage_manager est une Classe
+      	
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 2260273779870060372
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 2260273779870125908
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : RechercheVegetalTrefle
+     procedure_id : 2260273973143699728
+     type_code : 12
+     code : |1+
+      procédure publique globale RechercheVegetalTrefle(sSnom est une chaine)
+      
+      	// recherche des images végétaux
+      	
+      	MaRecherche est une restRequête
+      	MaRéponse est une restRéponse
+      	
+      	sTokenTrefle est une chaine = INILit("TREFLE","TOKEN","ERREUR",fRepEnCours() + "\PARAM.INI")
+      	
+      	UrlSimple est une chaine = "https://trefle.io/api/v1/plants/search?token=%1&q=%2"
+      	
+      	sUrlRequete est une chaine = URLEncode(ChaîneConstruit(UrlSimple,sTokenTrefle,sSnom))
+      	
+      	//
+      	trace(sUrlRequete)
+      	
+      	
+      	MaRecherche.URL = sUrlRequete
+      	
+      	MaRéponse = RESTEnvoie(MaRecherche)
+      	
+      	vVariantTrefle est un variant
+      	
+      	
+      	si MaRéponse..CodeEtat = 200 ALORS
+      		
+      		vVariantTrefle = JSONVersVariant(MaRéponse..Contenu)
+      		
+      		nBOccurences est un entier = vVariantTrefle.data..Occurrence
+      		
+      		pour i = 1 _A_ nBOccurences
+      			Trace(vVariantTrefle.data[i].scientific_name)
+      			Trace(vVariantTrefle.data[i].image_url)	
+      			trace("---------------------------------------------------")
+      					
+      		FIN
+      		
+      		
+      		
+      	FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1f5e1b010041b8bf
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

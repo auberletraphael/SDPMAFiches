@@ -135,8 +135,21 @@ window :
          
          si sNomimage <> "" ALORS
          	TBLR_Tableur["O" + numLigne] = sNomimage
+         	// TEST
+         	
+         	sMonimagemin est une chaîne = ChaîneSupprime(sNomimage,".jpg")
+         	
+         	trace(sMonimagemin)
+         	
+         	sMonimagemin += "_min.jpg"
+         	
+         	trace(sMonimagemin)
+         	
+         	
+         	TableurAjouteImage(TBLR_Tableur,gsCheminFichier+"Images\" + sMonimagemin,"O" + numLigne)
          	si SAI_Fichierencour <> "" ALORS
          		TableurSauve(TBLR_Tableur,SAI_Fichierencour,tblrEcrasementAutorisé)
+         		
          		
          		SI OuiNon("Voulez-vous Visualiser la fiche ?") ALORS
          			tableurVersFichier(numLigne)
@@ -212,6 +225,7 @@ window :
       FIN
       
       checkPolices()
+      VerifUPDATE()
       
      type : 34
    -

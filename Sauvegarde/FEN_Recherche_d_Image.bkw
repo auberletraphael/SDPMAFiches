@@ -73,9 +73,13 @@ window :
         p_codes :
          -
            code : |1-
+            sNomImage est une chaîne
+            sNomImage = Ouvre(FEN_Prévisualiser,ZR_images.ATT_lienWeb,gsCheminSauve)
             
-            
-            Ouvre(FEN_Prévisualiser,ZR_images.ATT_lienWeb,gsCheminSauve)
+            si sNomImage <> "" ALORS
+            	gsNomimage = sNomImage
+            	Ferme(FEN_Recherche_d_Image)
+            FIN
            type : 18
     columns :
      -
@@ -167,6 +171,7 @@ window :
      code : |1+
       PROCEDURE MaFenêtre(gsRecherche est une chaîne,gsCheminSauve est une chaine)
       SAI_recherche = gsRecherche
+      gsNomimage est une chaîne
    -
      code : |1+
       
@@ -174,6 +179,11 @@ window :
       	AfficheImages()
       FIN
      type : 34
+   -
+     code : |1-
+      
+      renvoyer gsNomimage
+     type : 2
    -
      type : 230
      enabled : false
