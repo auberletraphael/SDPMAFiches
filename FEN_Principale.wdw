@@ -31,24 +31,33 @@ window :
       -
         code : |1+
          //V1
+         
+         //sFichier est une chaine
+         //sFichier = fSélecteur("", "", "Sélectionnez un fichier Excel...", "Fichier Excel" + TAB + "*.xls;*.xlsx", "*.xls;*.xlsx")
+         
+         
          // TableurCharge(TBLR_Tableur,fRepEnCours() + "\fichiers\Fiche_Import_Animalerie.xlsx",1)
          
-         //sCheminFichier est une chaine = chercheExcel()
-         //
-         //si sCheminFichier <> "" ALORS
-         //	ouvreExcel(sCheminFichier)
-         //	SAI_Fichierencour = sCheminFichier
-         //FIN
+         sCheminFichier est une chaine = chercheExcel()
+         
+         si sCheminFichier <> "" ALORS
+         	ouvreExcel(sCheminFichier)
+         	SAI_Fichierencour = sCheminFichier
+         FIN
          
          //V2
-         sFichier est une chaine
-         sFichier = fSélecteur("", "", "Sélectionnez un fichier Excel...", "Fichier Excel" + TAB + "*.xls;*.xlsx", "*.xls;*.xlsx")
+         //sFichier est une chaine
+         //sFichier = fSélecteur("", "", "Sélectionnez un fichier Excel...", "Fichier Excel" + TAB + "*.xls;*.xlsx", "*.xls;*.xlsx")
+         //
+         //clMonexcel est un CDocumentXls(sFichier,TBLR_Tableur..NomComplet)
+         //
+         //gpclMonFichierExcel = clMonexcel
+         //
+         //gsCheminFichier = gpclMonFichierExcel:ouvreXls()
+         //
+         //SAI_Fichierencour = gsCheminFichier
          
-         clMonexcel est un CDocumentXls(sFichier,TBLR_Tableur..NomComplet)
-         
-         gpclMonFichierExcel = clMonexcel
-         
-         gpclMonFichierExcel:ouvreXls()
+         identifieFiche()
          
          
          
@@ -95,14 +104,40 @@ window :
       -
         code : |1+
          numligne est un entier
+         
          nRetoursaisie est un entier = Saisie("Quelle ligne voulez vous imprimer ? Tapez 0 pour tout générer",numligne)
          
-         // tableur vers excel
-         tableurVersFichier(numligne)
          
-         //Lancer l'ETAT_impression
-         iDestination(iVisualisateur)
-         iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         selon gnTypeFiche
+         	cas 1 // 1 Végétaux
+         		 //info("En cours")
+         		// tableur vers excel
+         		tableurVersFichier(numligne)
+         		
+         		iDestination(iVisualisateur)
+         		iImprimeEtat(ETAT_FicheVegetaux1,gsCheminFichier+"Images\")
+         		
+         	cas 2 // Animaux
+         		
+         		// tableur vers excel
+         		tableurVersFichier(numligne)
+         
+         		//Lancer l'ETAT_impression
+         		iDestination(iVisualisateur)
+         		iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         		
+         	AUTRE CAS
+         		
+         FIN
+         
+         
+         
+         
+         
+         
+         
+         
+         
          
          
          
@@ -151,31 +186,53 @@ window :
          FIN
          
          si sNomimage <> "" ALORS
-         	TBLR_Tableur["O" + numLigne] = sNomimage
+         	
+         	// SELON LA FICHE
+         	selon gnTypeFiche
+         		cas 2 // Fiche Animaux
+         			ajouteImage("O")
+         		cas 1 // Fiche Végétaux
+         			ajouteImage("N")
+         		AUTRE CAS
+         			
+         	FIN
+         	
+         	
+         	
+         	
+         	// FIN DE CAS FICHE
+         	
+         	
+         
+         	
+         FIN
+         
+         procédure interne ajouteImage(sColonneimage est une chaine)
+         	TBLR_Tableur[sColonneimage + numLigne] = sNomimage
          	// TEST
          	
          	sMonimagemin est une chaîne = ChaîneSupprime(sNomimage,".jpg")
          	
-         	trace(sMonimagemin)
+         	//trace(sMonimagemin)
          	
          	sMonimagemin += "_min.jpg"
          	
-         	trace(sMonimagemin)
+         	//trace(sMonimagemin)
          	
+         	TBLR_Tableur..HauteurLigne = 200
          	
-         	TableurAjouteImage(TBLR_Tableur,gsCheminFichier+"Images\" + sMonimagemin,"O" + numLigne)
-         	si SAI_Fichierencour <> "" ALORS
+         	TableurAjouteImage(TBLR_Tableur,gsCheminFichier+"Images\" + sMonimagemin,sColonneimage + numLigne)
+         	SI SAI_Fichierencour <> "" ALORS
          		TableurSauve(TBLR_Tableur,SAI_Fichierencour,tblrEcrasementAutorisé)
          		
          		
          		SI OuiNon("Voulez-vous Visualiser la fiche ?") ALORS
-         			tableurVersFichier(numLigne)
+         			tableurVersFichier(numligne)
          			iDestination(iVisualisateur)
          			iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
          		FIN
-         	
+         		
          	FIN
-         	
          FIN
          
          
@@ -244,7 +301,9 @@ window :
    -
      code : |1+
       PROCEDURE MaFenêtre()
-      FEN_Principale..Libellé = MoiMême..Libellé + " Version : " + ExeInfo(exeVersion)
+      gsLibFenetrePrincipale est une chaine = MoiMême..Libellé + " Version : " + ExeInfo(exeVersion)
+      
+      FEN_Principale..Libellé = gsLibFenetrePrincipale
       
       vAriantAnimal	est un variant
       gsCheminExcel est une chaine
@@ -252,6 +311,14 @@ window :
       gsCheminFichier est une chaîne
       
       gpclMonFichierExcel est une CDocumentXls dynamique
+      
+      // 1 Veg 2 Animaux
+      gnTypeFiche est un entier = 0
+      
+      
+      gsDesignationFiche est une chaine
+      
+      
       
       
    -
@@ -325,35 +392,111 @@ window :
       	// vide ou cré le fichier de données
       	videfichier()
       	
-      selon nLigne
-      	cas 0
-      		// impression de tout le catalogue
-      		imprimecatalogue()
-      		
-      	AUTRE CAS
-      		// impression une seule fiche
-      		si nLigne > 1 ALORS
-      			fiche.NOM_VERNACULAIRE		= TBLR_Tableur["A" + nLigne]
-      			fiche.NOM_SCIENTIFIQUE		= TBLR_Tableur["B" + nLigne]
-      			fiche.FAMILLE				= 		 TBLR_Tableur["C" + nLigne]
-      			fiche.DUREE_DE_VIE			=	 TBLR_Tableur["D" + nLigne]
-      			fiche.PERIODE_ACTIVITE		= TBLR_Tableur["E" + nLigne]
-      			fiche.TAILLE_MIN_HABITAT	= TBLR_Tableur["F" + nLigne]
-      			fiche.LITIERE				= 		 TBLR_Tableur["G" + nLigne]
-      			fiche.POID					= 			 TBLR_Tableur["H" + nLigne]
-      			fiche.MAT_SEX				= 		 TBLR_Tableur["I" + nLigne]
-      			fiche.GESTATION				= 		 TBLR_Tableur["J" + nLigne]
-      			fiche.PORTEE				= 			 TBLR_Tableur["K" + nLigne]
-      			fiche.MAINTIEN				= 		 TBLR_Tableur["L" + nLigne]
-      			fiche.NOURRITURE			= 		 TBLR_Tableur["M" + nLigne]
-      			fiche.COUT_ANNUEL			= 	 TBLR_Tableur["N" + nLigne]
-      			fiche.IMAGE					= 			 TBLR_Tableur["O" + nLigne]
-      			HAjoute(fiche)
-      		sinon
-      			Info("Ligne non disponible")
+      	
+      	// SELON TYPE FICHE
+      	selon gnTypeFiche
+      		cas 1 // Végétaux
+      		SELON nLigne
+      			CAS 0
+      				// impression de tout le catalogue Animaux
+      				imprimecatalogueVEG()
+      				
+      			AUTRE CAS
+      				// impression une seule fiche
+      				SI nLigne > 1 ALORS
+      					FicheVegetaux.NOM_VERNACULAIRE		= TBLR_Tableur["A" + nLigne]
+      					FicheVegetaux.NOM_SCIENTIFIQUE		= TBLR_Tableur["B" + nLigne]
+      					FicheVegetaux.DESCRIPTIF			= TBLR_Tableur["C" + nLigne]
+      					FicheVegetaux.PER_FLO				= TBLR_Tableur["D" + nLigne]
+      					FicheVegetaux.COUL_FLO				= TBLR_Tableur["E" + nLigne]
+      					FicheVegetaux.TYP_FEUIL				= TBLR_Tableur["F" + nLigne]
+      					FicheVegetaux.HAUTEUR				= TBLR_Tableur["G" + nLigne]
+      					FicheVegetaux.ETALEMENT				= TBLR_Tableur["H" + nLigne]
+      					FicheVegetaux.EXPO					= TBLR_Tableur["I" + nLigne]
+      					FicheVegetaux.RUSTICITE				= TBLR_Tableur["J" + nLigne]
+      					FicheVegetaux.TYPE_SOL				= TBLR_Tableur["K" + nLigne]
+      					FicheVegetaux.UTILISATION			= TBLR_Tableur["L" + nLigne]
+      					FicheVegetaux.PRIX					= TBLR_Tableur["M" + nLigne]
+      					FicheVegetaux.IMAGE					= TBLR_Tableur["N" + nLigne]
+      					
+      					HAjoute(FicheVegetaux)
+      				SINON
+      					Info("Ligne non disponible")
+      				FIN
+      				
       		FIN
-      		
-      FIN
+      			
+      			
+      			
+      		cas 2 // Animaux
+      			
+      		SELON nLigne
+      			CAS 0
+      				// impression de tout le catalogue Animaux
+      				imprimecatalogue()
+      				
+      			AUTRE CAS
+      				// impression une seule fiche
+      				SI nLigne > 1 ALORS
+      					fiche.NOM_VERNACULAIRE		= TBLR_Tableur["A" + nLigne]
+      					fiche.NOM_SCIENTIFIQUE		= TBLR_Tableur["B" + nLigne]
+      					fiche.FAMILLE				= TBLR_Tableur["C" + nLigne]
+      					fiche.DUREE_DE_VIE			= TBLR_Tableur["D" + nLigne]
+      					fiche.PERIODE_ACTIVITE		= TBLR_Tableur["E" + nLigne]
+      					fiche.TAILLE_MIN_HABITAT	= TBLR_Tableur["F" + nLigne]
+      					fiche.LITIERE				= TBLR_Tableur["G" + nLigne]
+      					fiche.POID					= TBLR_Tableur["H" + nLigne]
+      					fiche.MAT_SEX				= TBLR_Tableur["I" + nLigne]
+      					fiche.GESTATION				= TBLR_Tableur["J" + nLigne]
+      					fiche.PORTEE				= TBLR_Tableur["K" + nLigne]
+      					fiche.MAINTIEN				= TBLR_Tableur["L" + nLigne]
+      					fiche.NOURRITURE			= TBLR_Tableur["M" + nLigne]
+      					fiche.COUT_ANNUEL			= TBLR_Tableur["N" + nLigne]
+      					fiche.IMAGE					= TBLR_Tableur["O" + nLigne]
+      					HAjoute(fiche)
+      				SINON
+      					Info("Ligne non disponible")
+      				FIN
+      				
+      		FIN
+      			
+      			
+      			
+      			
+      			
+      		AUTRE CAS
+      			info("Aucun Fichier trouvé")
+      			
+      	FIN
+      	
+      	
+      	procédure interne imprimecatalogueVEG()
+      	i est un entier = 2
+      	
+      		TANTQUE i <=1000
+      			SI TBLR_Tableur["A" + i] <> "" ALORS
+      				FicheVegetaux.NOM_VERNACULAIRE		= TBLR_Tableur["A" + i]
+      				FicheVegetaux.NOM_SCIENTIFIQUE		= TBLR_Tableur["B" + i]
+      				FicheVegetaux.DESCRIPTIF			= TBLR_Tableur["C" + i]
+      				FicheVegetaux.PER_FLO				= TBLR_Tableur["D" + i]
+      				FicheVegetaux.COUL_FLO				= TBLR_Tableur["E" + i]
+      				FicheVegetaux.TYP_FEUIL				= TBLR_Tableur["F" + i]
+      				FicheVegetaux.HAUTEUR				= TBLR_Tableur["G" + i]
+      				FicheVegetaux.ETALEMENT				= TBLR_Tableur["H" + i]
+      				FicheVegetaux.EXPO					= TBLR_Tableur["I" + i]
+      				FicheVegetaux.RUSTICITE				= TBLR_Tableur["J" + i]
+      				FicheVegetaux.TYPE_SOL				= TBLR_Tableur["K" + i]
+      				FicheVegetaux.UTILISATION			= TBLR_Tableur["L" + i]
+      				FicheVegetaux.PRIX					= TBLR_Tableur["M" + i]
+      				FicheVegetaux.IMAGE					= TBLR_Tableur["N" + i]
+      				
+      				HAjoute(FicheVegetaux)
+      			FIN
+      			i++
+      		FIN
+      	FIN
+      	
+      
       
       
       
@@ -366,19 +509,19 @@ window :
       		SI TBLR_Tableur["A" + i] <> "" ALORS
       			fiche.NOM_VERNACULAIRE	= TBLR_Tableur["A" + i]
       			fiche.NOM_SCIENTIFIQUE	= TBLR_Tableur["B" + i]
-      			fiche.FAMILLE			= 		 TBLR_Tableur["C" + i]
-      			fiche.DUREE_DE_VIE		=	 TBLR_Tableur["D" + i]
+      			fiche.FAMILLE			= TBLR_Tableur["C" + i]
+      			fiche.DUREE_DE_VIE		= TBLR_Tableur["D" + i]
       			fiche.PERIODE_ACTIVITE	= TBLR_Tableur["E" + i]
-      			fiche.TAILLE_MIN_HABITAT	= TBLR_Tableur["F" + i]
-      			fiche.LITIERE			= 		 TBLR_Tableur["G" + i]
-      			fiche.POID				= 			 TBLR_Tableur["H" + i]
-      			fiche.MAT_SEX			= 		 TBLR_Tableur["I" + i]
-      			fiche.GESTATION			= 		 TBLR_Tableur["J" + i]
-      			fiche.PORTEE			= 			 TBLR_Tableur["K" + i]
-      			fiche.MAINTIEN			= 		 TBLR_Tableur["L" + i]
-      			fiche.NOURRITURE		= 		 TBLR_Tableur["M" + i]
-      			fiche.COUT_ANNUEL		= 	 TBLR_Tableur["N" + i]
-      			fiche.IMAGE				= 			 TBLR_Tableur["O" + i]
+      			fiche.TAILLE_MIN_HABITAT= TBLR_Tableur["F" + i]
+      			fiche.LITIERE			= TBLR_Tableur["G" + i]
+      			fiche.POID				= TBLR_Tableur["H" + i]
+      			fiche.MAT_SEX			= TBLR_Tableur["I" + i]
+      			fiche.GESTATION			= TBLR_Tableur["J" + i]
+      			fiche.PORTEE			= TBLR_Tableur["K" + i]
+      			fiche.MAINTIEN			= TBLR_Tableur["L" + i]
+      			fiche.NOURRITURE		= TBLR_Tableur["M" + i]
+      			fiche.COUT_ANNUEL		= TBLR_Tableur["N" + i]
+      			fiche.IMAGE				= TBLR_Tableur["O" + i]
       			HAjoute(fiche)
       		FIN
       		i++
@@ -390,6 +533,7 @@ window :
       procédure interne videfichier()
       	HCréationSiInexistant("*")
       	HSupprimeTout(fiche)
+      	HSupprimeTout(FicheVegetaux)
       FIN
      type : 458752
    -
@@ -441,6 +585,8 @@ window :
       
       gsCheminFichier = fExtraitChemin(sChemin,fDisque + fRépertoire)
       
+      identifieFiche()
+      
      type : 458752
    -
      name : checkPolices
@@ -480,6 +626,25 @@ window :
       	FIN
       FIN
       
+     type : 458752
+   -
+     name : identifieFiche
+     procedure_id : 2261606357895417032
+     type_code : 14
+     code : |1-
+      procédure identifieFiche()
+      
+      //trace(TBLR_Tableur["F1"])
+      
+      si TBLR_Tableur["F1"] = "TYPE DE FEUILLAGE " ALORS
+      	//VEG
+      	gnTypeFiche = 1
+      	FEN_Principale..Libellé = gsLibFenetrePrincipale + " FICHE VEGETAUX"
+      sinon
+      	//ANI
+      	gnTypeFiche = 2
+      	FEN_Principale..Libellé = gsLibFenetrePrincipale + " FICHE ANNIMALERIE"
+      FIN
      type : 458752
   procedure_templates : []
   property_templates : []

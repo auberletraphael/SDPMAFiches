@@ -54,7 +54,7 @@ class :
       // Chargement du document Xlsx
       TableurCharge({m_sChampAffiche},m_sCheminDocument,1)
       
-      renvoyer fExtraitChemin(m_sCheminDocument,fDisque + fRépertoire)
+      renvoyer fExtraitChemin(m_sCheminDocument,fDisque + fRépertoire + fFichier + fExtension)
      type : 458752
   procedure_templates : []
   property_templates : []
