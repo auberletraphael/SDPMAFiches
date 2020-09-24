@@ -115,7 +115,7 @@ window :
          		tableurVersFichier(numligne)
          		
          		iDestination(iVisualisateur)
-         		iImprimeEtat(ETAT_FicheVegetaux)
+         		iImprimeEtat(ETAT_FicheVegetaux1,gsCheminFichier+"Images\")
          		
          	cas 2 // Animaux
          		
