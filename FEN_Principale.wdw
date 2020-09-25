@@ -302,6 +302,11 @@ window :
    -
      code : |1+
       PROCEDURE MaFenêtre()
+      
+      
+      HCréationSiInexistant("*")
+      
+      
       gsLibFenetrePrincipale est une chaine = MoiMême..Libellé + " Version : " + ExeInfo(exeVersion)
       
       FEN_Principale..Libellé = gsLibFenetrePrincipale
