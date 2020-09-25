@@ -72,7 +72,7 @@ window :
   -
     name : TBLR_Tableur
     identifier : 0x2f07ebbd02166627
-    internal_properties : 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
+    internal_properties : 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
     columns : []
     type : 114
     code_elements :
@@ -115,7 +115,7 @@ window :
          		tableurVersFichier(numligne)
          		
          		iDestination(iVisualisateur)
-         		iImprimeEtat(ETAT_FicheVegetaux1,gsCheminFichier+"Images\")
+         		iImprimeEtat(Catalogue_Fiche_Végétaux,gsCheminFichier+"Images\")
          		
          	cas 2 // Animaux
          		
@@ -227,9 +227,27 @@ window :
          		
          		
          		SI OuiNon("Voulez-vous Visualiser la fiche ?") ALORS
-         			tableurVersFichier(numligne)
-         			iDestination(iVisualisateur)
-         			iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         			SELON gnTypeFiche
+         				CAS 1 // 1 Végétaux
+         					//info("En cours")
+         					// tableur vers excel
+         					tableurVersFichier(numLigne)
+         					
+         					iDestination(iVisualisateur)
+         					iImprimeEtat(Catalogue_Fiche_Végétaux,gsCheminFichier+"Images\")
+         					
+         				CAS 2 // Animaux
+         					
+         					// tableur vers excel
+         					tableurVersFichier(numLigne)
+         					
+         					//Lancer l'ETAT_impression
+         					iDestination(iVisualisateur)
+         					iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         					
+         				AUTRE CAS
+         					
+         			FIN
          		FIN
          		
          	FIN
@@ -267,23 +285,6 @@ window :
         enabled : false
       -
         type : 278
-        enabled : false
-  -
-    name : BTN_SansNom1
-    identifier : 0x2f5e196902137e82
-    internal_properties : BQAAAAUAAACSlbJGbhQJAlM0vkOcDfrY+wM9JZI8gT4Jt825pdy/vWLdr4CZUvOP2wEjLd7pu4sgy5GLk3MAnK2el9c94wjhIvKlSLf+4bSJa1JLjGDcPYYSGOow15ZxfIaHVRH7TTZ7lhjFMYFr5WG7sclSNTm5CxVgUi3iokqrUZf1B7XD5sattphJVdsk3cjubSdyo6LWKH1y79IGj7CTYJPBsqpygHRrArSsy/N+2pvK36QeLtV2MOAyT0B9fm96CwPoPyPsj38T3/aKQP/FHZXVRoPVxkFiP79j7QmLZsRTAcqxJ9UUWTXTmuz1bhF8c1PWZFyNni4Ys6vV+P2QoLEq+6VrdcNqjB7jcJssojCInteZ+MseHUG8cYGhOCB185ngktwZ1dKOfyxRWDzB2gUllYPguu9UlQpXW8b+EMjSnjhhJRIxIDkOlidutx4/59eo6tVHcUceA5jmJDn2I8hIqJpTHvJ4URNDtum+k33JCp+jUzFh9Xcx/fX2+ntDjPcP2p8ZB4Cw7EmbsVBHG2+4ab52diqQmagoVw4XxBgegzybyyVzupVaF2leeZC2WnoWF57/MqUZ3WTWMWB98BBRgajClCrCQfnC6YpfEBJmF8pGC1/qunjvuo8AB8JjBAc2PbW5YIhNCF12ZUs4mqQVZgHN7NJ39uUWgtpjXMxOzzwNMV5CWPMxZEjWNw+gG9RmqomfAYNf2StAExFF/7SPMcMagDXzaeXiuovam5M=
-    type : 4
-    code_elements :
-     type_code : 4
-     p_codes :
-      -
-        code : |1+
-         CImage_manager::RechercheVegetalTrefle("Bambusa ventricosa")
-         
-         
-        type : 18
-      -
-        type : 161
         enabled : false
  menu :
   name : _Menu
@@ -324,12 +325,12 @@ window :
    -
      code : |1+
       
-      si SAI_Fichierencour <> "" ALORS
-      	ouvreExcel(SAI_Fichierencour)
-      FIN
-      
-      checkPolices()
-      VerifUPDATE()
+      //si SAI_Fichierencour <> "" ALORS
+      //	ouvreExcel(SAI_Fichierencour)
+      //FIN
+      //
+      //checkPolices()
+      //VerifUPDATE()
       
      type : 34
    -
