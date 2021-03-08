@@ -28,13 +28,18 @@ report :
      -
        name : TEXTE1
        identifier : 0x501bdddc05362457
-       internal_properties : BgAAAAYAAAC8U//gxId3PcnN6evqRMlVZeGWlAVWROHXPBvq+yII6xjqephtZyOQSl/jBv6GUZXiYZiF1NwbCaXYUBOEVgdP3tYrkUh9JfbO8nNBOx97lDFjVL5h26992ZRN3JNU+RK0zncpfokfoW+U3qOaCfmv/LbETtUv0WHFZOA8cRvrHf4LRPT5ABOtoQJfdyUqWiFnIcl0v+c5tpjMuffUiy8jwq/Vg7qBnRkgc2whqHl27vcZ6rH8lPnezpvyKJSuuhrS7e5UewFSTE7ZJFNZUSe0CnijJ8S8uRJxgw5SHz5CCTXA8Za32znzcYjM1dByfP6ApqOhO1Se9Y1oDJgIIbcCpFAv/s0HGq3NDIta1f4VvljuMVpQsS239oV9NGKrMdESZ24vdSed3V+WhZlPtGoPtibWQVxROtCSVjU97NWtf4TCvUuCqYBHqsXiat4rt5NwO75OmQ4XvUOeH4HkY8Of5Hbol/rpcfWm0hFoCbcOgjYJpJZOX2pHu3S49usM+wDPX2AW4QopWR7xDPyiA99F/G2yAt+KDNY86xjV53kJ2eRm5mYflDGP8yRJwMKVJZ77FEQqVFboaK/ASw/HjQ3EREUNGog3fiuH8iVwvgvqeO/aI6iN0DUJVUj1caTLOhAbqyEr8vU53nRpbUZX68uN/hNbBDtQ
+       internal_properties : BgAAAAYAAADfdtjFodJAbpjc4LC9O5yENBCHhRJFVdJiTxb/fqX7/hP1F51mUiitIYb6r8HdmFzZqPFODatAxuCLo0RL2ZrOXVWoEvGM1kf94YKuqk6q2+AqJY8uKlzCfD/YAXb3GL0XKajmg7xQ6iaTFegtgESKj2Hxg+ZilqaIX6vxJM6eICFeiVEiw2zubH0aOPjtAWje6KZNbLZug8u/FChrHrLWJYL+GF8kRtpnMqte67hJoSosL14xPxIvfQqB2UedbamBvL8lqNDHWSUAw/A48MZLaafAsHXD7ueUthH/SimxGCTfhqckam7YJDIkPVjMjO6O3LGzJ1Km4bciVONR7r4LqV0+784UL0BWhXSxaklAa+d9QEthoB6m4bAoQXeG3H6h9v2QFka+/L41JDooy118BfUl8q0A6wPBBWTOfSTcKC916JBP5MUKaQShqx/qdswLXlkjtiksUNbh0tYxNvZMM8W/QEOgKizplVQt1vpNQ3nU/8sbip967ifru7BXNj2KkhPjFt0GtKVI0zWbOiYOJxDtR4QtqXWfjrtqfNS0BrO1tRdoQ+I+opM40dNk1M+Km8Or1dVp6yJz/lwUUMB5mxxUQ1Fut+JOCcyJlyLdbeLVJpWSyyp82MsIZlE+SSEKmhA848QKMZtAtD9IGhpe0W4+IRiz
        code_elements :
         type_code : 29
         p_codes :
          -
            code : |1+
-            
+            //sChaineRecupBase est une chaine = MoiMême
+            //nTailleChaineAffiche est un entier = Taille(sChaineRecupBase)
+            //
+            //si nTailleChaineAffiche > 20 ALORS
+            //	MoiMême[MoiMême].PoliceTaille = 30
+            //FIN
             
            type : 327692
      -
@@ -266,7 +271,7 @@ report :
            code : |1+
             sBaliseshtml est une chaîne
             sBaliseshtml = [
-            <p style=font-size:16px;font-family:Arial;color:white;text-align:center;>
+            <p style=font-size:15px;font-family:Arial;color:white;text-align:center;>
             %1
             </p>
             ]
@@ -293,7 +298,7 @@ report :
      -
        name : FRM_FORME3
        identifier : 0x504610390234d4be
-       internal_properties : BgAAAAYAAAAitZzHoDtbeWFhl7gDi1AtTzYSlC84UHfTaEOKvqD2taF1+BhRE5OeHW1ZEB3k/vtWYfSKVR6Jq61W8M//3VbrPUpnDYanvw8GhakdpklrAEIKgYMxdZZUX35pcS6HtiPtvXdsVv5GiVReq8bbBW2aR+doQFd5WCbvh5qZXf0Q2J7oJ07DubBLDROrMZ9VN071iDy+QgW3xccV7+ZvBOg7PqjZSbGOfKxE/nxLKAglldh0UGJOnCcgZ4vSLQeam0Ix0un+Te30y9ohhdNSoD+tL3XDZj/hqdcQkcfm0OS7eNkJm0WS1rzOX296b/tuEin4lWiw+isMrLQtDuM3aKw9XF9IPTOsy9zcQAm20nbWKHphOJJVZ8ZM0/bUx42oszqhj7lHSbHr1Gm3b0Yn8FjD7upg8moGHDP/qVv3u4jC3HRHeNnF354RuWwGq3wQKhKPvUwBY9zhR8aBlnPNr6ks8O4d1g==
+       internal_properties : BgAAAAYAAACtqgYc9cGZzZq4e0TUtgyxTpIdiTQ4QZa+ctriSYoK1KI26xUkR0BRhqOK4DpmHIW4KjHu+/CPbGa62+MaVboIZlV4yNARrntXQbQXU6uwgn+ttnE9yGg40Y3i1gITb+qj9iCt/5PpiS0m0f4N1uhCES4pXuOErYeP24X6K8HvXQLvhEA3ZgvyZZTml2sVhLaBqHYrxOVbdmmiiMhedBzBTcO55TznrzhyZ260kXoFCdfWBrsf51loUv9Y8O5nxpsFcXOlvhi8tbVTe5ZJvaaq20YXUY7++RlFjf3RR3EqTWeSKST7CfwU9M36PmbHX8BCUHDpr5oeZKFlKHLevdsCbJSyEIRHwxbnIusd7V9lNTI4CMVYgM4a0c7h/gMZpgbR/J8weyN6qLWXdbV4BCmWQNuR9thEr1TPQsD4IOUYx6etcUbOkq08srCwSc03geNYnA==
        code_elements :
         type_code : 29
         p_codes : []
