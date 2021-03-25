@@ -112,35 +112,65 @@ window :
          FIN
          
          
-         selon gnTypeFiche
-         	cas 1 // 1 Végétaux
-         		 //info("En cours")
-         		// tableur vers excel
-         		tableurVersFichier(numligne)
-         		
-         		iDestination(iVisualisateur)
-         		iImprimeEtat(Catalogue_Fiche_Végétaux,gsCheminFichier+"Images\")
-         		
-         	cas 2 // Animaux
-         		
-         		// tableur vers excel
-         		tableurVersFichier(numligne)
+         //selon gnTypeFiche
+         //	cas 1 // 1 Végétaux
+         //		 //info("En cours")
+         //		// tableur vers excel
+         //		tableurVersFichier(numligne)
+         //		
+         //		iDestination(iVisualisateur)
+         //		iImprimeEtat(Catalogue_Fiche_Végétaux,gsCheminFichier+"Images\")
+         //		
+         //	cas 2 // Animaux
+         //		
+         //		// tableur vers excel
+         //		tableurVersFichier(numligne)
+         //
+         //		//Lancer l'ETAT_impression
+         //		iDestination(iVisualisateur)
+         //		iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         //		
+         //	cas 3
+         //		// tableur vers excel
+         //		tableurVersFichier(numligne)
+         //		
+         //		//Lancer l'ETAT_impression
+         //		iDestination(iVisualisateur)
+         //		iImprimeEtat(Catalogue_Fiche_Animaux_APEX,gsCheminFichier+"Images\")
+         //		
+         //	AUTRE CAS
+         //		
+         //FIN
          
-         		//Lancer l'ETAT_impression
-         		iDestination(iVisualisateur)
-         		iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         //
+         selon numligne
+         	cas 0
+         		nNbLignes est un entier
          		
-         	cas 3
-         		// tableur vers excel
-         		tableurVersFichier(numligne)
+         		POUR i = 1 _a_ 1000
+         			celluletab est une chaine = "A" + i
+         			SI TBLR_Tableur[celluletab] <> "" ALORS
+         				nNbLignes ++
+         			FIN
+         		FIN
          		
-         		//Lancer l'ETAT_impression
-         		iDestination(iVisualisateur)
-         		iImprimeEtat(Catalogue_Fiche_Animaux_APEX,gsCheminFichier+"Images\")
+         		
+         		//Trace(nNbLignes)
+         		
+         		POUR x = 2 _a_ nNbLignes
+         			tableurVersFichier(x)
+         			EnregistrePDF()
+         		FIN
          		
          	AUTRE CAS
          		
+         		tableurVersFichier(numligne)
+         		EnregistrePDF()
+         		
          FIN
+         
+         info("Création des fiches terminées, elles se trouvent dans le dossier de votre fichier Excel dans un sous-dossier Pdf.")
+         
          
          
          
@@ -800,6 +830,76 @@ window :
       		//trace(gnTypeFiche,FEN_Principale..Libellé)
       	AUTRE CAS
       		
+      FIN
+     type : 458752
+   -
+     name : EnregistrePDF
+     procedure_id : 1178580502521644247
+     type_code : 14
+     code : |1-
+      procédure EnregistrePDF()
+      
+      //tableurVersFichier(numligne)
+      sTypeFiche est une chaîne
+      
+      
+      
+      selon gnTypeFiche
+      	cas 1 // Vegetaux v1
+      		sTypeFiche = "Catalogue_Fiche_Végétaux"
+      		POUR TOUT FicheVegetaux  
+      			
+      			sNomFiche est une chaîne = FicheVegetaux.NOM_VERNACULAIRE	
+      			lanceimpressionpdf(sNomFiche)
+      			
+      		FIN
+      	cas 2 // Animaux v1
+      		sTypeFiche = "Catalogue_fiche"
+      		
+      		POUR TOUT fiche  
+      			
+      			sNomFiche est une chaîne = fiche.NOM_VERNACULAIRE	
+      			lanceimpressionpdf(sNomFiche)
+      			
+      		FIN
+      		
+      		
+      	cas 3 // Apex
+      		sTypeFiche = "Catalogue_Fiche_Animaux_APEX"
+      		
+      		POUR TOUT FicheAnimauxV2 
+      			
+      			sNomFiche est une chaîne = FicheAnimauxV2.NOM_VERNACULAIRE	
+      			lanceimpressionpdf(sNomFiche)
+      			
+      		FIN
+      		
+      		
+      	AUTRE CAS
+      		retour
+      		
+      FIN
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      procédure interne lanceimpressionpdf(sNomFichierPdf est une chaine)
+      	
+      	nomfiche est une chaine = Remplace(sNomFichierPdf," ","_")
+      	nomfiche = Remplace(nomfiche,"'","_")
+      	
+      	iDestination(iPDF,gsCheminFichier+"Pdf\" + nomfiche + ".pdf")
+      	iImprimeEtat(sTypeFiche,gsCheminFichier+"Images\")
+      	
+      	//trace(gsCheminFichier+"Pdf\" + nomfiche + ".pdf")
       FIN
      type : 458752
   procedure_templates : []

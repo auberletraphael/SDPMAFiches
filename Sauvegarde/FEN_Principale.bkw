@@ -104,39 +104,45 @@ window :
         code : |1+
          numligne est un entier
          
-         nRetoursaisie est un entier = Saisie("Quelle ligne voulez vous imprimer ? Tapez 0 pour tout générer",numligne)
+         bNRetoursaisie est un booléen = Saisie("Quelle ligne voulez vous imprimer ? Tapez 0 pour tout générer",numligne)
          
          
-         selon gnTypeFiche
-         	cas 1 // 1 Végétaux
-         		 //info("En cours")
-         		// tableur vers excel
-         		tableurVersFichier(numligne)
-         		
-         		iDestination(iVisualisateur)
-         		iImprimeEtat(Catalogue_Fiche_Végétaux,gsCheminFichier+"Images\")
-         		
-         	cas 2 // Animaux
-         		
-         		// tableur vers excel
-         		tableurVersFichier(numligne)
-         
-         		//Lancer l'ETAT_impression
-         		iDestination(iVisualisateur)
-         		iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
-         		
-         	cas 3
-         		// tableur vers excel
-         		tableurVersFichier(numligne)
-         		
-         		//Lancer l'ETAT_impression
-         		iDestination(iVisualisateur)
-         		iImprimeEtat(Catalogue_Fiche_Animaux_APEX,gsCheminFichier+"Images\")
-         		
-         	AUTRE CAS
-         		
+         si bNRetoursaisie = Faux ALORS
+         	retour
          FIN
          
+         
+         //selon gnTypeFiche
+         //	cas 1 // 1 Végétaux
+         //		 //info("En cours")
+         //		// tableur vers excel
+         //		tableurVersFichier(numligne)
+         //		
+         //		iDestination(iVisualisateur)
+         //		iImprimeEtat(Catalogue_Fiche_Végétaux,gsCheminFichier+"Images\")
+         //		
+         //	cas 2 // Animaux
+         //		
+         //		// tableur vers excel
+         //		tableurVersFichier(numligne)
+         //
+         //		//Lancer l'ETAT_impression
+         //		iDestination(iVisualisateur)
+         //		iImprimeEtat(Catalogue_fiche,gsCheminFichier+"Images\")
+         //		
+         //	cas 3
+         //		// tableur vers excel
+         //		tableurVersFichier(numligne)
+         //		
+         //		//Lancer l'ETAT_impression
+         //		iDestination(iVisualisateur)
+         //		iImprimeEtat(Catalogue_Fiche_Animaux_APEX,gsCheminFichier+"Images\")
+         //		
+         //	AUTRE CAS
+         //		
+         //FIN
+         
+         EnregistrePDF(numligne)
          
          
          
@@ -795,6 +801,54 @@ window :
       		//trace(gnTypeFiche,FEN_Principale..Libellé)
       	AUTRE CAS
       		
+      FIN
+     type : 458752
+   -
+     name : EnregistrePDF
+     procedure_id : 1178580502521644247
+     type_code : 14
+     code : |1-
+      procédure EnregistrePDF(numligne est un entier)
+      
+      tableurVersFichier(numligne)
+      sTypeFiche est une chaîne
+      
+      
+      selon gnTypeFiche
+      	cas 1 // Vegetaux v1
+      		sTypeFiche = "Catalogue_Fiche_Végétaux"
+      	cas 2 // Animaux v1
+      		sTypeFiche = "Catalogue_fiche"
+      	cas 3 // Apex
+      		sTypeFiche = "Catalogue_Fiche_Animaux_APEX"
+      	AUTRE CAS
+      		retour
+      		
+      FIN
+      
+      
+      
+      POUR TOUT FicheAnimauxV2 
+      	
+      	sNomFiche est une chaîne = FicheAnimauxV2.NOM_VERNACULAIRE
+      	
+      	lanceimpressionpdf(sNomFiche)
+      	
+      FIN
+      
+      
+      
+      
+      
+      
+      procédure interne lanceimpressionpdf(sNomFichierPdf est une chaine)
+      	
+      	nomfiche est une chaine = Remplace(sNomFichierPdf," ","_")
+      	
+      	iDestination(iPDF,gsCheminFichier+"Pdf\" + nomfiche + ".pdf")
+      	iImprimeEtat(sTypeFiche,gsCheminFichier+"Images\")
+      	
+      	trace(gsCheminFichier+"Pdf\" + nomfiche + ".pdf")
       FIN
      type : 458752
   procedure_templates : []
